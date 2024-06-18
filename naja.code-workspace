@@ -1,0 +1,98 @@
+// Emojipedia with get Emoji Names for Rush folder: https://emojipedia.org/
+{
+    "folders": [
+        // Frontend
+        {
+            "name": "🌐 Front End Cliente",
+            "path": "./apps/front-end-client"
+        },
+        // Services
+        {
+            "name": "🛰️ Back-end",
+            "path": "./services/back-end-api"
+        },
+        {
+            "name": "🐋 Keycloak",
+            "path": "./services/keycloak"
+        },
+        // Libraries
+        {
+            "name": "📚 UI Kit",
+            "path": "./libs/ui-kit"
+        },
+        {
+            "name": "📡 Back-End SDK",
+            "path": "./libs/verification-integration"
+        },
+        {
+            "name": "📡 Keycloak SDK",
+            "path": "./libs/keycloak-sdk"
+        },
+        // Tooling
+        {
+            "name": "💻 Dragon CLI",
+            "path": "./tools/cli"
+        },
+        {
+            "name": "⚙️ Certificate Generator",
+            "path": "./tools/ensure-certificate"
+        },
+        {
+            "name": "⚙️ Library Builder",
+            "path": "./tools/library-builder"
+        },
+        {
+            "name": "⚙️ Forward Env Opts",
+            "path": "./tools/forward-env"
+        },
+        {
+            "name": "⚙️ Configurations",
+            "path": "./tools/configs"
+        },
+        // Root
+        {
+            "name": "💠 Root",
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.exclude": {
+            // Specific project names to avoid disabling the option of creating new projects from VSCode
+            "apps": true,
+            "tools": true,
+            "libs": true,
+            "services": true,
+            "common": true
+        },
+        "search.exclude": {
+            "**/node_modules": true,
+            "**/bower_components": true,
+            "**/*.code-search": true,
+            "**/dist/*": true,
+            "**/.generated/*": true,
+            "**/coverage*": true,
+            "**/.rush*": true
+        },
+        // Support rush json5 files, using jsonc as it has autocompletion from schema.
+        "files.associations": {
+            "rush.json": "jsonc",
+            "**/config/rush/*.json": "jsonc"
+        },
+        "typescript.tsdk": "🌐 Backoffice/node_modules/typescript/lib",
+        "material-icon-theme.folders.associations": {
+            "queries": "graphql",
+            "store": "redux-store"
+        },
+        "material-icon-theme.files.associations": {
+            "vitest.setup.ts": "vitest"
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "pkief.material-icon-theme",
+            "dbaeumer.vscode-eslint",
+            "esbenp.prettier-vscode",
+            "naumovs.color-highlight"
+        ]
+    }
+}

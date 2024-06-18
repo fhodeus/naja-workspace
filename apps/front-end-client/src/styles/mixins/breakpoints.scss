@@ -1,0 +1,59 @@
+@import '../variables';
+
+/**
+ * Utility mixin to output a simple media query based on min-width
+ * for the specified breakpoint.
+ */
+@mixin breakpoint($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}
+
+/**
+ * Alias for breakpoint('phablet') mixin
+ */
+@mixin phablet() {
+    @include breakpoint('phablet') {
+        @content;
+    }
+}
+
+/**
+ * Alias for breakpoint('tablet') mixin
+ */
+@mixin tablet() {
+    @include breakpoint('tablet') {
+        @content;
+    }
+}
+
+/**
+ * Alias for breakpoint('desktop') mixin
+ */
+@mixin desktop() {
+    @include breakpoint('desktop') {
+        @content;
+    }
+}
+
+/**
+ * Alias for breakpoint('large-desktop') mixin
+ */
+@mixin large-desktop() {
+    @include breakpoint('large') {
+        @content;
+    }
+}
+
+/**
+ * Fullscreen media query, active when fullscreen is requested on a certain
+ * page.
+ */
+@mixin fullscreen() {
+    :global(.is-fullscreen) & {
+        @content;
+    }
+}

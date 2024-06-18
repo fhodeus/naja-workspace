@@ -1,0 +1,20 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/colors';
+@import '../../styles/mixins/typography';
+@import '../../styles/mixins/breakpoints';
+
+.divider {
+    align-self: stretch;
+    background: #d5dae5;
+    height: 1px;
+    min-height: 1px;
+    width: auto;
+
+    &--vertical {
+        align-self: stretch;
+        height: auto;
+        min-height: 100%;
+        min-width: 1px;
+        width: 1px;
+    }
+}

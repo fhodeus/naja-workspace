@@ -1,0 +1,31 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+    commands:
+      - echo install pnpm...
+      - npm install -g pnpm
+      - echo install rush...
+      - pnpm install -g rush
+      - pnpm config set ignore-engines true
+      - echo pnpm -v
+      - pnpm -v
+      - echo rush -v
+      - rush -v
+  pre_build:
+    commands:
+      - rush install
+  build:
+    commands:
+      - rush build
+  post_build:
+    commands:
+      - echo build completed on 'date'
+      - cp -r apps/casino-citizen/dist/* /var/www/apps/dev/cassino-citizen/
+
+artifacts:
+  files:
+    - 'apps/casino-citizen/dist/*'
+  discard-paths: yes

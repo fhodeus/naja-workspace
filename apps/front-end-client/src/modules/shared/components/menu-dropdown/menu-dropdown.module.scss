@@ -1,0 +1,8 @@
+@import '../../../../styles/mixins/remify';
+
+.menu-dropdown {
+    min-height: remify(45px);
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}

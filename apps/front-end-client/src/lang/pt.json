@@ -1,0 +1,13 @@
+{
+    "error.not-found.message": "Não foi possível encontrar a página que você solicitou. <home>Clique aqui para voltar à página inicial</home>.",
+    "error.not-found.title": "404 Pagina Não Encontrada",
+    "error.not-service.message": "Não foi possível encontrar a página que você solicitou. <home>Clique aqui para voltar à página inicial</home>.",
+    "error.not-service.title": "Oops! Parece que nosso sistema esta momentaneamente fora do ar. Estamos trabalhando para resolver isso. Volte em breve!",
+    "page.title": "Front-end-client",
+    "dashboard.components.menu.language": "Idioma",
+    "dashboard.components.menu.appearance": "Aparencia",
+    "dashboard.components.menu.straighten": "Estender",
+    "dashboard.components.menu.full-screen": "Tela cheia",
+    "dashboard.components.menu.javascript-structure": "Estrutura JavaScript",
+    "dashboard.components.menu.log-out": "Sair"
+}

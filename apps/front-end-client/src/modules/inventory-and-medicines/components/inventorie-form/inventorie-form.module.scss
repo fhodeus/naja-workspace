@@ -1,0 +1,13 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/breakpoints';
+@import '../../../../styles/mixins/typography';
+
+.customer-form {
+    position: relative;
+
+    &__button-container {
+        justify-content: flex-end;
+    }
+
+}

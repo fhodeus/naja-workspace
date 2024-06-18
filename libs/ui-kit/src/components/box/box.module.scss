@@ -1,0 +1,16 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/colors';
+@import '../../styles/mixins/typography';
+@import '../../styles/mixins/breakpoints';
+
+.box {
+    background: color-from-var($secondary-color-100);
+    border-radius: $radius--small;
+    box-shadow: var(
+        --shadow-medium-soft--bottom,
+        0 0 1px rgba(10, 31, 68, 0.08),
+        0 8px 10px rgba(10, 31, 68, 0.09)
+    );
+    padding: $space--4;
+    user-select: none;
+}

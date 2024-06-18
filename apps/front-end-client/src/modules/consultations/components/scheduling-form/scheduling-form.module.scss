@@ -1,0 +1,49 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/breakpoints';
+@import '../../../../styles/mixins/typography';
+
+.scheduling-form {
+    position: relative;
+
+    &__scheduling-header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+
+    &__date-hour-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &__button-container {
+        justify-content: flex-end;
+    }
+
+    &__subtitle-section {
+        @include set-font-size(calc($font-size--5 - 2px));
+        line-height: 12px;
+    }
+
+    &__title-section {
+        color: var(--color-black-100, #1c222f);
+        font-size: var(--font-size--heading-5, 1rem);
+        font-weight: 600;
+        gap: var(--space--small, 8px);
+        line-height: var(--line-height--heading-5, 1.5rem);
+        line-height: 28px;
+    }
+
+    &__field-array {
+        align-items: end;
+        display: grid;
+        gap: $space--4;
+        grid-template-columns: 1fr 1fr auto;
+    }
+
+    &__field-array-delete {
+        &--not-disabled {
+            color: color-from-var($interaction-color);
+        }
+    }
+}

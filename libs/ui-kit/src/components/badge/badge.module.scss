@@ -1,0 +1,108 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/typography';
+@import '../../styles/mixins/colors';
+
+.badge {
+    @include medium-text();
+
+    align-items: center;
+    border-radius: $radius--small;
+    display: flex;
+    font-size: inherit;
+    gap: $space--1;
+    text-align: center;
+    width:fit-content;
+    white-space: nowrap;
+
+    &--pill {
+        border-radius: 10px;
+    }
+
+    &--only-icon {
+        align-items: center;
+        justify-content: center;
+    }
+
+    &--pill#{&}--only-icon {
+        border-radius: 50%;
+    }
+
+    &--info {
+        background: color-from-var($color-info-500);
+        color: color-from-var($secondary-color-100);
+    }
+
+    &--alert {
+        background: color-from-var($color-alert-500);
+        color: color-from-var($secondary-color-100);
+    }
+
+    &--danger {
+        background: color-from-var($color-danger-500);
+        color: color-from-var($secondary-color-100);
+    }
+
+    &--success {
+        background: color-from-var($color-success-500);
+        color: color-from-var($secondary-color-100);
+    }
+
+    &--dark {
+        background: color-from-var($primary-color-500);
+        color: color-from-var($secondary-color-100);
+    }
+
+    &--complementary {
+        background: color-from-var($complementary-color-500);
+        color: color-from-var($secondary-color-100);
+    }
+
+    &--heading-5 {
+        // @include text-heading-5();
+        font-size: remify(16px);
+        line-height: remify(24px);
+        padding: $space--2 $space--5;
+    }
+
+    &--heading-5#{&}--only-icon {
+        height: remify(44px);
+        padding: 0;
+        width: remify(44px);
+    }
+
+    &--subtitle {
+        padding: $space--2 $space--4;
+    }
+
+    &--subtitle#{&}--only-icon {
+        height: remify(40px);
+        padding: 0;
+        width: remify(40px);
+    }
+
+    &--body {
+        @include set-font-size($font-size--6);
+        @include header-text();
+        letter-spacing: remify(1.3px);
+        padding: remify(4px) $space--3;
+    }
+
+    &--body#{&}--only-icon {
+        height: remify(32px);
+        padding: 0;
+        width: remify(32px);
+    }
+
+    &--caption {
+       font-size: remify(12px);
+        @include header-text();
+        padding: $space--1;
+        line-height: 1.25;
+    }
+
+    &--caption#{&}--only-icon {
+        height: remify(24px);
+        padding: 0;
+        width: remify(24px);
+    }
+}

@@ -1,0 +1,23 @@
+version: '3'
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:22.0.1
+    container_name: keycloak
+    restart: always
+    ports:
+      - 80:8080
+      - 443:8443
+
+    volumes:
+      - /var/lib/docker/volumes/keycloak:/opt/keycloak/conf
+      - ./certs/fullchain.pem:/etc/x509/https/fullchain.pem
+      - ./certs/privkey.pem:/etc/x509/https/privkey.pem
+
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=password
+      - KC_HOSTNAME=auth.clinic-pet.app.br
+      - KC_HTTPS_CERTIFICATE_FILE=/etc/x509/https/fullchain.pem
+      - KC_HTTPS_CERTIFICATE_KEY_FILE=/etc/x509/https/privkey.pem
+    command:
+      - start-dev

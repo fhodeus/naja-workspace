@@ -1,0 +1,13 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/typography';
+
+.text-area {
+    @include set-font-size($font-size--5);
+    border: 1px solid var(--input-border-color, #{$color-gray-medium});
+
+    // TODO: Not accessible but designs do not have an alternative.
+    outline: none;
+    padding: $space--2;
+
+    width: 100%;
+}

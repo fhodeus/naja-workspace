@@ -1,0 +1,44 @@
+version: "3.7"
+services:
+  mysql-db:
+    image: mysql:5.7
+    restart: always
+    tty: true
+    command: [mysqld, --default_authentication_plugin=mysql_native_password, --character-set-server=utf8, --collation-server=utf8_bin, --default-storage-engine=INNODB]
+    environment:
+      MYSQL_DATABASE: 'databaseClinicPet'
+      MYSQL_USER: 'postgres'
+      MYSQL_PASSWORD: 'fernando123'
+      MYSQL_ROOT_PASSWORD: 'fernando123'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+
+  postgres-db:
+    image: postgres:14.10
+    restart: always
+    tty: true
+    environment:
+      POSTGRES_DB: 'my_database'
+      POSTGRES_USER: 'user'
+      POSTGRES_PASSWORD: 'password'
+    ports:
+      - '5432:5432'
+    expose:
+      - '5432'
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - '8090:8080'
+    depends_on:
+      - mysql-db
+      - postgres-db
+
+volumes:
+  mysql-data:
+  postgres-data:

@@ -1,0 +1,10 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/colors';
+@import '../../styles/mixins/breakpoints';
+@import '../../styles/mixins/typography';
+
+.title {
+    @include set-font-size($font-size--8);
+    font-weight: 600;
+    line-height: 32px;
+}

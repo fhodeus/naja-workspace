@@ -1,0 +1,186 @@
+@import './mixins/remify';
+@import './design_system.variables';
+
+$breakpoints: (
+    phablet: 500px,
+    tablet: 768px,
+    desktop: 1024px,
+    large: 1400px,
+);
+
+// Default values as SASS values.
+
+$_font-family--heading: 'Inter', 'Roboto', sans-serif;
+$_font-family--content: 'Inter', 'Roboto', sans-serif;
+
+$_font-weight--strong: 700;
+$_font-weight--medium: 500;
+$_font-weight--content: 400;
+$_font-weight--heading: 400;
+
+$_font-size--base: remify(16px);
+$_font-size-x--1: remify(48px);
+$_font-size--1: remify(34px);
+$_font-size--2: remify(24px);
+$_font-size--3: remify(20px);
+$_font-size--4: remify(18px);
+$_font-size--5: remify(14px);
+$_font-size--6: remify(12px);
+
+$_radius--large: 12px;
+$_radius--small: 4px;
+$_radius: 8px;
+
+$_space--10: 40px;
+$_space--9: 40px;
+$_space--7: 36px;
+$_space--8: 32px;
+$_space--6: 24px;
+$_space--5: 20px;
+$_space--4: 16px;
+$_space--3: 12px;
+$_space--2: 8px;
+$_space--1: 4px;
+
+$_transition-delay: 0.2s;
+
+$_page-max-width: 1200px;
+$_page-max-width--small: 650px;
+
+// CSS Variable definitions for use in components
+
+$color-primary: var(--color-primary, #{$_interaction-color});
+$color-primary-500: var(--color-primary-500, #{$_primary-color-500});
+$color-secondary: var(--color-secondary, #{$_secondary-color});
+$color-tertiary: var(--color-tertiary, #{$_primary-color-700});
+
+$background-color-primary: var(--background-color-primary, #{$_primary-color-600});
+
+$color-action: var(--color-action, #{$_interaction-color});
+
+$color-tertiary-medium: var(--color-tertiary-medium, #{$_primary-color-500});
+$color-tertiary-light: var(--color-tertiary-light, #{$_grays-color-600});
+
+$color-gray-light: var(--color-gray-light, #{$_secondary-color-300});
+$color-gray-medium: var(--color-gray-medium, #{$_secondary-color-500});
+$color-gray-dark: var(--color-gray-dark, #{$_secondary-color-600});
+$color-gray-semi-light: var(--color-gray-semi-light, #{$_secondary-color-400});
+$color-gray-darkest: var(--color-gray-darkest, #{$_secondary-color-700});
+
+$text-color-info: var(--text-color-info, #{$_interaction-color});
+$text-color-success: var(--text-color-success, #{$_function-color-success});
+$text-color-warning: var(--text-color-warning, #{$_function-color-alert});
+$text-color-error: var(--text-color-error, #{$_function-color-danger});
+$color-error: var(--color-error, #{$_interaction-color-200});
+
+$color-tertiary--contrast: var(--color-tertiary--contrast, #{$_secondary-color-base});
+$color-tertiary--low-contrast: var(--color-tertiary--low-contrast, #{$_secondary-color-300});
+$color-primary--contrast: var(--color-primary--contrast, #{$_primary-color-700});
+
+$gradient-primary: var(--gradient-primary, #{$_interaction-color});
+
+$text-color-primary: var(--text-color-primary, #{$_interaction-color});
+$text-color-tertiary: var(--text-color-tertiary, #{$_secondary-color-base});
+
+$font-family--heading: var(--font-family--heading, #{$_font-family--heading});
+$font-family--content: var(--font-family--content, #{$_font-family--content});
+
+$font-weight--strong: var(--font-weight--strong, $_font-weight--strong);
+$font-weight--medium: var(--font-weight--strong, $_font-weight--medium);
+$font-weight--heading: var(--font-weight--heading, $_font-weight--heading);
+$font-weight--content: var(--font-weight--content, $_font-weight--content);
+
+$font-size--base: var(--font-size--base, #{$_font-size--base});
+$font-size-x--1: var(--font-size-x--1, #{$_font-size-x--1});
+$font-size--1: var(--font-size--1, #{$_font-size--1});
+$font-size--2: var(--font-size--2, #{$_font-size--2});
+$font-size--3: var(--font-size--3, #{$_font-size--3});
+$font-size--4: var(--font-size--4, #{$_font-size--4});
+$font-size--5: var(--font-size--5, #{$_font-size--5});
+$font-size--6: var(--font-size--6, #{$_font-size--6});
+
+$radius--small: var(--radius--small, #{$_radius--small});
+$radius: var(--radius, #{$_radius});
+$radius--large: var(--radius--large, #{$_radius--large});
+
+$space--10: var(--space--10, #{$_space--10});
+$space--8: var(--space--8, #{$_space--8});
+$space--6: var(--space--6, #{$_space--6});
+$space--5: var(--space--5, #{$_space--5});
+$space--4: var(--space--4, #{$_space--4});
+$space--3: var(--space--3, #{$_space--3});
+$space--2: var(--space--2, #{$_space--2});
+$space--1: var(--space--1, #{$_space--1});
+
+$transition-delay: var(--transition-delay, #{$_transition-delay});
+
+$page-max-width: var(--page-max-width, #{$_page-max-width});
+$page-max-width--small: var(--page-max-width--small, #{$_page-max-width--small});
+
+// *****
+
+$color-white: var(--color-white, #{$_secondary-color-base});
+$color-divisor: var(--color-divisor, #{$_primary-color-400});
+
+$border-bottom-color: var(--border-bottom-color, #{$_primary-color-400});
+$border-info-color: var(--border-info-color, #{$_primary-color-400});
+$border-color--box: var(--border-color--box, #{$_primary-color-400});
+
+$background-color--info-box: var(--background-color--info-box, #{$_primary-color-500});
+$background-color--box: var(--background-color--box, #{$_primary-color-500});
+
+$input-background: var(--color-divisor, #{$_primary-color-400});
+$input-border: var(--input-border, #{$_primary-color-300});
+$input-placeholder: var(--input-placeholder, #{$_secondary-color-500});
+$input-disabled-color: var(--color-divisor, #{$_secondary-color-400});
+$input-disabled-background: var(--color-divisor, #{$_secondary-color-500});
+$input-disabled-border-color: var(--color-divisor, #{$_secondary-color-400});
+
+$border-color--select-box: var(--border-color--select-box, #{$_primary-color-100});
+
+$table-heading-bg: var(--table-heading-bg, #{$_primary-color-700});
+
+$border-rounded: 1000px;
+
+$grays-color-200: var(--grays-color-200, $_grays-color-200); // #9ea6b0
+$secondary-color-300: var(--secondary-color-300, $_secondary-color-300); // #2d397d
+
+$primary-color-600: var(--primary-color-400, $_primary-color-600);
+$primary-color-500: var(--primary-color-500, $_primary-color-500);
+$primary-color-400: var(--primary-color-400, #{$_primary-color-400});
+$primary-color-300: var(--primary-color-300, $_primary-color-300);
+$primary-color-200: var(--primary-color-200, $_primary-color-200);
+$primary-color-100: var(--primary-color-100, $_primary-color-100);
+
+$background-button-color: var(--background-button-color, #{$_interaction-color});
+$background-button-hover: var(--background-button-hover, #{$_interaction-color-500});
+$background-button-pressed: var(--background-button-pressed, #{$_interaction-color-700});
+
+$border-button-color: var(--border-button-color, #{$_interaction-color-300});
+$border-button-hover: var(--border-button-hover, #{$_interaction-color});
+$border-button-pressed: var(--border-button-pressed, #{$_interaction-color-500});
+
+$balance-link-color: var(--balance-link-color, #{$_interaction-color-300});
+
+$color-asset-icon: var(--color-asset-icon, #{$_interaction-color});
+
+$interaction-color-700: var(--interaction-color-700, #{$_interaction-color-700});
+$interaction-color-600: var(--interaction-color-600, #{$_interaction-color-600});
+$interaction-color-500: var(--interaction-color-500, #{$_interaction-color-500});
+
+$interaction-color-300: var(--interaction-color-300, #{$_interaction-color-300});
+$interaction-color: var(--interaction-color, #{$_interaction-color});
+
+$secondary-color-base: var(--secondary-color-base, #{$_secondary-color-base});
+$secondary-color: var(--secondary-color, #{$_secondary-color});
+$secondary-color-300: var(--secondary-color-300, #{$_secondary-color-300});
+$secondary-color-400: var(--secondary-color-400, #{$_secondary-color-400});
+$secondary-color-500: var(--secondary-color-500, #{$_secondary-color-500});
+$secondary-color-600: var(--secondary-color-600, #{$_secondary-color-600});
+$secondary-color-base: var(--secondary-color-base, #{$_secondary-color-base});
+
+$function-color-alert: var(--function-color-alert, #{$_function-color-alert});
+$grays-color-600: var(--grays-color-600, $_grays-color-600);
+$grays-color-400: var(--grays-color-400, $_grays-color-400);
+$grays-color-200: var(--grays-color-200, $_grays-color-200);
+$grays-color-100: var(--grays-color-100, $_grays-color-100);

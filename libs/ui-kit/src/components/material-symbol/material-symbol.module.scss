@@ -1,0 +1,46 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/remify';
+@import '../../styles/mixins/colors';
+
+.material-symbol {
+    font-size: remify(12px);
+    font-variant: normal;
+    user-select: none;
+
+    &--fill {
+        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+    }
+
+    &--x-small {
+        font-size: remify(12px);
+    }
+
+    &--small {
+        font-size: remify(16px);
+    }
+
+    &--medium {
+        font-size: remify(24px);
+    }
+
+    &--large {
+        font-size: remify(36px);
+    }
+
+    &--x-large {
+        font-size: remify(48px);
+    }
+
+    &--xx-large {
+        font-size: remify(80px);
+    }
+
+    &--auto {
+        font-size: auto;
+        height: auto;
+    }
+
+    &--interaction {
+        color: red;
+    }
+}

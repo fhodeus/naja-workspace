@@ -1,0 +1,16 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/breakpoints';
+
+.customer-info {
+    display: grid;
+    gap: $space--4;
+    grid-template-columns: 1fr auto 3fr;
+
+    &__client-info-content {
+        display: grid;
+
+        gap: $space--4;
+        grid-template-columns: 1fr 1fr;
+    }
+}

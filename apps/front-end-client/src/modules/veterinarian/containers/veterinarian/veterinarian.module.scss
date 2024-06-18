@@ -1,0 +1,14 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/breakpoints';
+@import '../../../../styles/mixins/typography';
+
+.veterinarian{
+    position: relative;
+
+    &__page-title {
+        @include set-font-size(calc($font-size--2 - 2px));
+        font-weight: 600;
+        line-height: 32px;
+    }
+}

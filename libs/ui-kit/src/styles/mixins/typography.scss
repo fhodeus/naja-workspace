@@ -1,0 +1,44 @@
+@mixin set-font-size($value) {
+    @if ($value =='inherit') {
+        font-size: inherit;
+    }
+
+    @else {
+        // TODO: remify
+        font-size: $value;
+    }
+}
+
+@mixin font-smoothing($value) {
+    @if ($value =='on') {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+
+    @else if ($value =='off') {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+@mixin content-text() {
+    font-weight: $font-weight--content;
+}
+
+@mixin medium-text() {
+    font-weight: $font-weight--medium;
+}
+
+@mixin strong-text() {
+    font-weight: $font-weight--strong;
+}
+
+@mixin header-text() {
+    font-weight: $font-weight--heading;
+}
+
+@mixin text-ellipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

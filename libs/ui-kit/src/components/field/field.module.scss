@@ -1,0 +1,114 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/breakpoints';
+@import '../../styles/mixins/colors';
+@import '../../styles/mixins/typography';
+@import '../../styles/mixins/remify';
+
+.field {
+    --info-icon-color: #{$grays-color-100};
+    @include set-font-size($font-size--5);
+
+    width: 100%;
+
+    &--has-info-shown {
+        --input-border-color: #{color-from-var($color-danger-500)};
+        --info-icon-color: #{color-from-var($color-danger-500)};
+    }
+
+    &--has-error {
+        --message-background: #{color-from-var($color-danger-500)};
+        --message-color: #{color-from-var($color-danger-500)};
+        --info-icon-spacing: #{$space--4};
+    }
+
+    &--has-success {
+        --info-icon-spacing: #{$space--4};
+    }
+
+    &--has-success &__field-wrapper::after,
+    &--has-error &__field-wrapper::after {
+        border-radius: 0 $radius $radius 0;
+        display: block;
+        height: calc(100% - 2px);
+        position: absolute;
+        right: 0;
+        top: 1px;
+        width: calc(#{$space--2} - 1px);
+    }
+
+    &--has-success &__field-wrapper::after {
+        background-color: color-from-var($color-success-400);
+    }
+
+    &--has-error &__field-wrapper::after {
+        background-color: color-from-var($color-danger-500);
+    }
+
+    &--no-error-indicator &__field-wrapper::after {
+        display: none;
+    }
+
+    &__field-wrapper {
+        position: relative;
+    }
+
+    &__label {
+        @include set-font-size($font-size--2);
+        @include strong-text();
+        color: color-from-var($grays-color-400);
+        display: block;
+        flex-shrink: 1;
+
+        padding-bottom: $space--1;
+        padding-left: calc($space--1 - 2px);
+
+        white-space: nowrap;
+    }
+
+    &__input {
+        flex-grow: 1;
+    }
+
+    &__info-icon {
+        color: color-from-var($grays-color-100);
+        cursor: pointer;
+        height: remify(20px);
+        position: absolute;
+        right: var(--info-icon-spacing, #{$space--2});
+        top: $space--3;
+        width: remify(20px);
+        z-index: 2;
+    }
+
+    &__info {
+        @include set-font-size($font-size--6);
+
+        border-top: 0;
+        color: #{color-from-var($color-danger-500)};
+
+        padding: $space--2 0;
+
+        position: relative;
+
+        &::after {
+            border-bottom: 6px solid color-from-var($color-danger-500);
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            content: '';
+            display: block;
+            position: absolute;
+            right: $space--3;
+            top: -6px;
+        }
+    }
+
+    &__message {
+        @include set-font-size(calc($font-size--1 + 2px));
+        color: var($grays-color-100);
+        display: block;
+        font-family: inherit;
+        font-weight: 600;
+        padding: $space--2 0;
+        padding-left: calc($space--1 - 2px);
+    }
+}

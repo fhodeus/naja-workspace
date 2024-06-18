@@ -1,0 +1,40 @@
+@mixin no-scrollbar() {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+
+    /* Firefox */
+    /* Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@mixin make-swipeable() {
+    @include no-scrollbar();
+    backface-visibility: hidden;
+
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+}
+
+@mixin scroll() {
+    ::-webkit-scrollbar-track {
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        height: 2px;
+    }
+
+    &::-webkit-scrollbar {
+        background: color-from-var($table-heading-bg);
+        height: 4px;
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: color-from-var($primary-color-500);
+        border-radius: 8px;
+    }
+}

@@ -1,0 +1,39 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/breakpoints';
+@import '../../../../styles/mixins/table';
+@import '../../../../styles/mixins/scroll';
+
+.inventory-lote-info {
+    @include scroll();
+
+    &__table {
+        @include table(true);
+    }
+
+    &__heading {
+        @include table-header();
+
+        border-top: color-from-var($primary-color-600) $space--1 solid;
+        padding-bottom: $space--3;
+        padding-top: $space--3;
+
+        &:first-child {
+            border-radius: $radius--small 0 0 $radius--small;
+            text-align: left;
+        }
+
+        &:last-child {
+            border-radius: 0 $radius--small $radius--small 0;
+        }
+    }
+
+    &__row {
+        @include table-row-divider();
+    }
+
+    &__item {
+        @include table-cell(false);
+        border-bottom: color-from-var($primary-color-600) $space--1 solid;
+    }
+}

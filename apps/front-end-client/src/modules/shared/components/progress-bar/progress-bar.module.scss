@@ -1,0 +1,40 @@
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/variables';
+
+$_bg-color: 0, 0, 0;
+$progress-bar-bg: var(--progress-bar--bg, $_bg-color);
+
+.progress-bar {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    &__wagering-bar {
+        background: color-from-var($progress-bar-bg);
+        border-radius: $space--1;
+        display: inline-block;
+        height: $space--2;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+
+        &--light {
+            background: color-from-var($color-tertiary--contrast);
+        }
+
+        &--value {
+            width: calc((100% - 5ch) - #{$space--2});
+        }
+    }
+
+    &__wagering-bar-progress {
+        background: color-from-var($text-color-success);
+        border-radius: $space--1;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        width: 0;
+    }
+}

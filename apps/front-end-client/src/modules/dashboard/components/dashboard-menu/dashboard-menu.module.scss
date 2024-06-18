@@ -1,0 +1,19 @@
+.dashboard-menu {
+    position: relative;
+
+    &__dashboard-menu {
+        display: grid;
+        grid-template-columns: 0fr;
+
+        height: 100%;
+        transition: grid-template-columns 0.3s ease-out;
+
+        &--is-open {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    // &__inner {
+    //     overflow: hidden;
+    // }
+}

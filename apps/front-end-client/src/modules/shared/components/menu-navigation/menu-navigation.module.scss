@@ -1,0 +1,33 @@
+@import '../../../../styles/variables';
+
+.menu-navigation {
+    align-items: center;
+    background: var(--color-white-100, #fff);
+    border: 0;
+
+    border-radius: $radius--small;
+    border-radius: var(--radius--small, 4px);
+    color: rgb(25 25 84);
+    color: var(--color-lucky-point-50, #4b4a81);
+    cursor: pointer;
+    display: flex;
+    font-weight: 600;
+    gap: var(--space--medium, 12px);
+    line-height: 20px;
+    padding: var(--space, 10px) var(--space--large, 16px);
+    position: relative;
+    text-decoration: none;
+
+    transition: all var(--transition-delay, 0.2s);
+    white-space: nowrap;
+
+    &--active {
+        background: var(--color-white-50, #eef1f6);
+        color: rgb(25 25 84);
+    }
+
+    &:hover {
+        background: var(--color-white-50, #eef1f6);
+        color: rgb(25 25 84);
+    }
+}

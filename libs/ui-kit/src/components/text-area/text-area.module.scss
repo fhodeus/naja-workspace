@@ -1,0 +1,44 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/colors';
+@import '../../styles/mixins/breakpoints';
+@import '../../styles/mixins/typography';
+
+$color-input: color-from-var($primary-color-400);
+$color-input-placeholder: color-from-var($primary-color-200);
+$color-input-disabled: color-from-var($grays-color-500);
+
+$background-input: color-from-var($secondary-color-300);
+$background-input-disabled: color-from-var($grays-color-300, 0.8);
+
+.text-area {
+    @include set-font-size($font-size--2);
+    font-family: $font-family;
+    background: $background-input;
+    border: 0;
+    border-radius: $radius;
+    color: $color-input;
+    font-weight: 600;
+    line-height: remify(20px);
+    margin: 0;
+
+    // TODO: Not accessible but designs do not have an alternative.
+    outline: none;
+
+    padding: calc($space--2 + 2px) $space--4;
+
+    width: 100%;
+
+    &::placeholder {
+        color: $color-input-placeholder;
+    }
+
+    &--disabled {
+        background: $background-input-disabled;
+
+        color: $color-input-disabled;
+    }
+
+  
+
+    
+}

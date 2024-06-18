@@ -1,0 +1,26 @@
+{
+    "name": "@endeavour/keycloak-sdk",
+    "version": "1.0.0",
+    "main": "./dist/index.js",
+    "scripts": {
+        "build": "forward-env rollup --configPlugin rollup-plugin-esbuild -c rollup.config.ts --silent",
+        "build:watch": "rushx build",
+        "test": "",
+        "lint": ""
+    },
+    "dependencies": {
+        "@endeavour/library-builder": "workspace:*",
+        "selfsigned": "^1.10.11",
+        "tslib": "^2.5.0"
+    },
+    "devDependencies": {
+        "@endeavour/configs": "workspace:*",
+        "@endeavour/forward-env": "workspace:*",
+        "@types/node": "18.15.3",
+        "rollup": "^3.19.1",
+        "typescript": "5.0.4",
+        "esbuild": "~0.17.12",
+        "rollup-plugin-esbuild": "^5.0.0",
+        "@keycloak/keycloak-admin-client": "22.0.1"
+    }
+}

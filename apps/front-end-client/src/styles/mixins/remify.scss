@@ -1,0 +1,43 @@
+@use 'sass:math';
+
+/**
+ * Strips the unit from the value provided.
+ * @example strip-unit(1px) === 1
+ */
+@function strip-unit($value) {
+    @if type-of($value) == 'number' and not unitless($value) {
+        @return math.div($value, ($value * 0 + 1));
+    }
+
+    @return $value;
+}
+
+/**
+ * Concatenates the numeric value given with the
+ * supplied unit. Returns a string representation.
+ */
+@function with-unit($value, $unit) {
+    @return #{$value}#{$unit};
+}
+
+/**
+ * Converts a pixel value into 'rem' units based on
+ * a document font-size of 16px.
+ */
+@function remify($value) {
+    $unit: math.unit($value);
+
+    @if ($unit == 'px') {
+        $rounded: math.div(math.round(math.div(strip-unit($value) * 100, 16)), 100);
+
+        @return with-unit($rounded, 'rem');
+    } @else {
+        @return $value;
+    }
+}
+
+@function spacing($value, $variable-name: --function-spacing) {
+    $rounded: math.div(math.round(math.div($value * 400, 16)), 100);
+
+    @return var($variable-name, with-unit($rounded, 'rem'));
+}

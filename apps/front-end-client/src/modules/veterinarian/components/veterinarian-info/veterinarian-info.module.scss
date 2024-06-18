@@ -1,0 +1,35 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/breakpoints';
+@import '../../../../styles/mixins/typography';
+
+.veterinarian-info {
+
+    display: grid;
+    gap: $space--4;
+    grid-template-columns: 1fr auto 3fr;
+    position: relative;
+
+    &__client-info-content {
+        display: grid;
+
+        gap: $space--4;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__label {
+        color: var(--color-black-50, #868991);
+        font-size: var(--font-size--overline, 0.63rem);
+        font-weight: 600;
+        letter-spacing: 0.09rem;
+        line-height: var(--line-height--overline, 1.13rem);
+        text-transform: uppercase;
+    }
+
+    &__data {
+        color: var(--color-black-100, #1c222f);
+        font-size: var(--font-size--body, 0.75rem);
+        line-height: var(--line-height--body, 1.13rem);
+        word-wrap: break-word;
+    }
+}

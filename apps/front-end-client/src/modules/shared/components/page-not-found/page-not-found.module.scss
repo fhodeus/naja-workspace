@@ -1,0 +1,22 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/typography';
+
+.page-not-found {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    width: 100%;
+
+    &__title {
+        width: 100%;
+    }
+
+    &__message {
+        width: 100%;
+    }
+}

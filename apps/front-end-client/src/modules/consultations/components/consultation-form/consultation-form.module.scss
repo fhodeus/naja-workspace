@@ -1,0 +1,17 @@
+.consultation-form {
+    position: relative;
+
+    &__scheduling-header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+
+    &__date-hour-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &__button-container {
+        justify-content: flex-end;
+    }
+}

@@ -1,0 +1,93 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/breakpoints';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/typography';
+@import '../../../../styles/mixins/remify';
+
+.radio {
+    --radio-size: #{remify(16px)};
+    @include set-font-size($font-size--4);
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    gap: $space--3;
+    white-space: nowrap;
+    width: 100%;
+
+    @include desktop() {
+        --radio-size: #{remify(18px)};
+        @include set-font-size($font-size--5);
+    }
+
+    &--bold {
+        @include strong-text();
+    }
+
+    &__field {
+        $border-width: 1px;
+        appearance: none;
+        background: #fff;
+        border: 1px solid color-from-var($color-secondary);
+        border-radius: 3px;
+        border-radius: 50%;
+        color: currentColor;
+        font: inherit;
+        height: var(--radio-size);
+        margin: 0;
+        position: relative;
+        white-space: nowrap;
+        width: var(--radio-size);
+
+        &:hover {
+            border: 1px solid color-from-var($color-primary);
+        }
+
+        // Inside content, hidden when unchecked
+        &::before,
+        &::after {
+            border-radius: 50%;
+            content: '';
+            height: var(--radio-size);
+            left: #{0px - $border-width};
+            opacity: 0;
+            position: absolute;
+            top: #{0px - $border-width};
+            transform: scale(0);
+            transition: 0.1s ease-out;
+            transition-property: opacity;
+            transition-property: opacity scale;
+            width: var(--radio-size);
+        }
+
+        &:checked::before,
+        &:checked::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        &:focus-within {
+            border: 2px solid color-from-var($color-primary);
+        }
+
+        &:checked {
+            border: 1px solid color-from-var($color-primary);
+        }
+
+        &::before {
+            // background-color: color-from-var($color-white);
+            border-radius: 50%;
+        }
+
+        // Selected dot
+        &::after {
+            background-color: color-from-var($color-primary);
+            height: 75%;
+            left: 13%;
+            position: absolute;
+            top: 13%;
+            // transform: translateX(-50%) translateY(-50%);
+            width: 75%;
+        }
+    }
+}

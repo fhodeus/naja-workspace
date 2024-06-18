@@ -1,0 +1,57 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/mixins/colors';
+@import '../../../../../styles/mixins/typography';
+
+.select-box {
+    background: color-from-var($color-divisor);
+    border-radius: $radius--small;
+    text-align: left;
+    width: 100%;
+
+    &__container {
+        position: relative;
+    }
+
+    &__icon {
+        color: color-from-var($color-gray-light);
+        pointer-events: none;
+        position: absolute;
+        right: $space--5;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__items {
+        display: none;
+        position: absolute;
+        width: 100%;
+
+        &--open {
+            display: block;
+        }
+    }
+
+    &__item {
+        background: color-from-var($color-divisor);
+        border: 1px solid color-from-var($border-color--select-box);
+        border-top: 0;
+        cursor: pointer;
+
+        // &:hover {
+        //     color: color-from-var($color-primary);
+        // }
+
+        line-height: 21px;
+        padding: $space--3;
+
+        &--selected {
+            @include header-text();
+            @include set-font-size($font-size--4);
+            border: 1px solid color-from-var($border-color--select-box);
+
+            border-radius: $radius--small;
+
+            color: color-from-var($color-tertiary--contrast);
+        }
+    }
+}

@@ -1,0 +1,6 @@
+export * from './customer.interface'
+export * from './veterinarian.interface'
+export * from './inventory.interface'
+export * from './pets.interface'
+export * from './consultation.interface'
+export * from './financial.interface'

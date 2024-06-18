@@ -1,0 +1,64 @@
+// primary-color
+$_primary-color-100: 165, 165, 192; //#a5a5c0
+$_primary-color-200: 120, 119, 161; //#7877a1
+$_primary-color-300: 75, 74, 129; //--#4b4a81
+$_primary-color-400: 30, 29, 98; //---#1e1d62
+$_primary-color-500: 25, 25, 84; //---#191954
+
+// secondary-color
+$_secondary-color-100: 255, 255, 255; //#ffffff
+$_secondary-color-200: 249, 250, 251; //#f9fafb
+$_secondary-color-300: 238, 241, 246; //#eef1f6
+$_secondary-color-400: 227, 233, 242; //#e3e9f2
+$_secondary-color-500: 222, 228, 237; //#dee4ed
+
+// interaction-color
+// cor utilizada botao de interacao ex: abrir formulario
+$_interaction-color-500: 83, 218, 192; //-#53dac0
+$_interaction-color-400: 87, 229, 202; //-#57e5ca
+$_interaction-color-300: 121, 234, 213; //#79ead5
+$_interaction-color-200: 154, 239, 223; //#9aefdf
+$_interaction-color-100: 227, 252, 248; //#e3fcf8
+
+// grays-color
+$_grays-color-100: 213, 218, 229; //#d5dae5
+$_grays-color-200: 179, 183, 193; //#b3b7c1
+$_grays-color-300: 134, 137, 145; //#868991
+$_grays-color-400: 90, 92, 96; //---#5a5c60
+$_grays-color-500: 28, 34, 47; //---#1c222f
+
+// complementary-color
+$_complementary-color-500: 85, 65, 166; //-#553ea6
+$_complementary-color-400: 89, 65, 175;//-#5941af
+$_complementary-color-300: 122, 103, 191;//-#7a67bf
+$_complementary-color-200: 155, 141, 207;//-#9b8dcf
+$_complementary-color-100: 233, 243, 252;//-e9e3fc
+
+// $_function-color-button
+// cor utilizada em successo ou botao de salvar formulario
+$_color-success-500: 24, 199, 103; //-#18c767
+$_color-success-400: 26, 214, 110; //-#1ad66e
+$_color-success-300: 72, 222, 139; //-#48de8b
+$_color-success-200: 118, 230, 168; //#76e6a8
+$_color-success-100: 227, 252, 238; //#e3fcee
+
+// $_function-color-info
+$_color-info-500: 5, 137, 210; //-- #0589d2
+$_color-info-400: 5, 144, 221; //-- #0590dd
+$_color-info-300: 55, 166, 228; //- #37a6e4
+$_color-info-200: 105, 188, 235; // #69bceb
+$_color-info-100: 227, 244, 252; // #e3f4fc
+
+// $_function-color-alert
+$_color-alert-500: 230, 158, 0; //---#e69e00
+$_color-alert-400: 245, 168, 0; //---#f5a800
+$_color-alert-300: 247, 185, 51; // -#f7b933
+$_color-alert-200: 249, 203, 102; //-#f9cb66
+$_color-alert-100: 252, 244, 227; //-#fcf4e3
+
+//$_function-color-danger
+$_color-danger-500: 232, 56, 55; //--#e83837
+$_color-danger-400: 244, 59, 58; //--#f43b3a
+$_color-danger-300: 246, 98, 97; //--#f66261
+$_color-danger-200: 248, 137, 137; //#f88989
+$_color-danger-100: 252, 228, 227; //#fce4e3

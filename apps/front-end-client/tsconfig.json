@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "useDefineForClassFields": true,
+        "lib": [
+            // Uncomment when typescript 4.6 + associated libs are out
+            // "es2021.intl",
+            "DOM",
+            "DOM.Iterable",
+            "ESNext",
+            "esnext.intl",
+            "es2021.intl",
+            "es2017.intl",
+            "es2018.intl"
+        ],
+        "allowJs": false,
+        "skipLibCheck": true,
+        "esModuleInterop": false,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "importsNotUsedAsValues": "error",
+        "forceConsistentCasingInFileNames": true,
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "typeRoots": ["./node_modules/@types"],
+
+        "ignoreDeprecations": "5.0"
+    },
+    "include": ["./src"]
+}

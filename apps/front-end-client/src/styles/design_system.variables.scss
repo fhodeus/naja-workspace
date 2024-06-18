@@ -1,0 +1,49 @@
+// Primary color
+$_primary-color-700: 8, 11, 23; //   #080b17;
+$_primary-color-600: 17, 22, 48; //  #111630
+$_primary-color-500: 27, 34, 74; //  #1b224a
+$_primary-color-400: 36, 46, 100; // #242e64
+$_primary-color-300: 45, 57, 125; // #2d397d
+$_primary-color-200: 54, 69, 150; // #364596
+$_primary-color-100: 63, 81, 176; // #3F51B0
+
+// Secondary color
+$_secondary-color-700: 89, 89, 88; //     #595958
+$_secondary-color-600: 115, 114, 113; //  #737271
+$_secondary-color-500: 140, 140, 138; //  #8c8c8a
+$_secondary-color-400: 166, 165, 163; //  #a6a5a3
+$_secondary-color-300: 191, 190, 189; //  #bfbebd
+$_secondary-color: 217, 216, 214; //      #d9d8d6
+$_secondary-color-base: 241, 241, 240; // #f1f1f0
+
+// Interaction color
+$_interaction-color-800: 128, 36, 45; //   #80242D
+$_interaction-color-700: 153, 43, 54; //   #992b36
+$_interaction-color-600: 178, 50, 63; //   #b2323f
+$_interaction-color-500: 204, 58, 72; //   #cc3a48
+$_interaction-color: 230, 65, 81; //       #e64151
+$_interaction-color-300: 255, 72, 90; //   #ff485a
+$_interaction-color-200: 255, 97, 112; //  #ff6170
+$_interaction-color-100: 255, 122, 135; // #ff7a87
+
+// Grays color
+$_grays-color-black: 20, 22, 23; //  #141617
+$_grays-color-600: 42, 45, 48; //    #2a2d30
+$_grays-color-gray: 75, 80, 86; //   #4b5056
+$_grays-color-400: 110, 117, 125; // #6e757d
+$_grays-color-300: 134, 141, 150; // #868d96
+$_grays-color-200: 158, 166, 176; // #9ea6b0
+$_grays-color-100: 181, 191, 201; // #b5bfc9
+
+// Complementary color
+$_complementary-1-color: 197, 32, 64; //       #c52040
+$_complementary-1-color-100: 230, 174, 167; // #e6aea7
+$_complementary-1-color-200: 218, 133, 127; // #da857f
+$_complementary-2-color: 86, 60, 135; //       #563c87
+$_complementary-2-color-100: 181, 169, 202; // #b5a9ca
+$_complementary-2-color-200: 147, 129, 176; // #9381b0
+
+// Functions color
+$_function-color-success: 32, 201, 151; // #20c997
+$_function-color-alert: 255, 193, 7; //    #ffc107
+$_function-color-danger: 220, 53, 69; //   #dc3545

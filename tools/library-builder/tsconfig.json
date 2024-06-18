@@ -1,0 +1,9 @@
+{
+    "extends": "./node_modules/@endeavour/configs/build/tsconfig.json",
+    "compilerOptions": {
+        "outDir": "./dist",
+        "rootDir": "src"
+    },
+    "include": ["src/**/*.ts", "src/config.ts"],
+    "exclude": ["node_modules"]
+}

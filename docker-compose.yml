@@ -1,0 +1,10 @@
+version: '3'
+services:
+  your-service-name:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - APP=back-end-api
+    ports:
+      - "3001:3001"

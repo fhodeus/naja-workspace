@@ -1,0 +1,12 @@
+{
+    "TENANT_ID": "front-end-client",
+    "AUTH_ENDPOINT": "https://auth.clinic-pet.app.br/",
+    "API_ENDPOINT": "http://localhost:3001",
+    "BASE_URL": "https://front-end-client.localhost:3000",
+    "KEYCLOAK_REALM": "front-end-client",
+    "KEYCLOAK_CLIENT_ID": "web-front-end-client",
+    "DEFAULT_LANGUAGE": "pt-BR",
+    "DEFAULT_LOCALE": "pt-BR",
+    "AVAILABLE_LOCALES": ["en-US", "pt-BR"],
+    "ASSET_URL": ""
+}

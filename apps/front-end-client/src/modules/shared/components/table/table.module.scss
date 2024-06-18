@@ -1,0 +1,34 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/breakpoints';
+@import '../../../../styles/mixins/typography';
+@import '../../../../styles/mixins/table';
+@import '../../../../styles/mixins/remify';
+@import '../../../../styles/mixins/scroll';
+
+.table-wrapper {
+    @include scroll();
+    overflow-x: auto;
+
+    &__table {
+        @include table();
+    }
+
+    &__heading {
+        @include table-header();
+    }
+
+    &__row {
+        @include table-row-divider();
+    }
+
+    tbody {
+        tr {
+            @include table-row-divider();
+        }
+
+        td {
+            @include table-cell();
+        }
+    }
+}

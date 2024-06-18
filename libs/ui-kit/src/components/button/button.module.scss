@@ -1,0 +1,133 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/colors';
+@import '../../styles/mixins/typography';
+@import '../../styles/mixins/breakpoints';
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes opacity-animation {
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+
+$background-button: color-from-var($interaction-color-400);
+
+$border-button: color-from-var($primary-color-500, 0.8);
+$border-button-hover: color-from-var($primary-color-500);
+
+.button {
+    @include set-font-size($font-size--2);
+    align-content: center;
+    align-items: center;
+    background: transparent;
+    border: 0;
+    border-radius: $radius--small;
+
+    color: color-from-var($primary-color-300);
+    cursor: pointer;
+
+    display: flex;
+    font-family: $_font-family;
+    font-weight: 600;
+    justify-content: center;
+
+    line-height: 24px;
+
+    padding: $space--2 $space--3;
+    text-decoration: none;
+
+    &--large {
+        @include set-font-size($font-size--4);
+        padding: calc($space--3 - 2px) $space--3;
+    }
+
+    &--small {
+        padding: $space--1 $space--2;
+    }
+
+    /** Variants **/
+    &--light {
+        background: color-from-var($secondary-color-300);
+    }
+
+    &--action {
+        background: color-from-var($interaction-color-400);
+    }
+
+    &--success {
+        background: color-from-var($color-success-400);
+        color: color-from-var($secondary-color-400);
+    }
+
+    &--hollow {
+        background: transparent;
+        color: $border-button;
+
+        &:hover {
+            background: $border-button;
+            color: color-from-var($secondary-color-100);
+        }
+    }
+
+    &--warning {
+        background: color-from-var($color-danger-500, 0.5);
+        color: color-from-var($color-danger-500);
+    }
+
+    &--disabled {
+        background: color-from-var($secondary-color-500);
+        color: color-from-var($secondary-color-300);
+
+        &:hover {
+            background: color-from-var($secondary-color-500);
+            color: color-from-var($secondary-color-300);
+        }
+    }
+
+    /** Modifiers **/
+    &--rounded-none {
+        border-radius: 0;
+    }
+
+    &--has-icon {
+        padding: $space--2;
+        aspect-ratio: 1/1;
+    }
+
+    &__loader {
+        margin-right: 0;
+        overflow: hidden;
+        transition: all 0.1s ease-in;
+        width: 0;
+
+        display: none;
+    }
+
+    &--loading > &__loader {
+        animation-duration: 1000ms;
+        animation-iteration-count: infinite;
+        animation-name: opacity-animation;
+        animation-timing-function: ease-in-out;
+        margin-right: $space--3;
+        width: 1em;
+        display: block;
+    }
+}

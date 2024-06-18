@@ -1,0 +1,17 @@
+{
+    "name": "@endeavour/forward-env",
+    "version": "0.2.0",
+    "scripts": {
+        "build": "",
+        "build:watch": "",
+        "test": "",
+        "lint": ""
+    },
+    "bin": {
+        "forward-env": "./src/index.js"
+    },
+    "devDependencies": {
+        "@endeavour/configs": "workspace:*",
+        "@types/node": "18.15.3"
+    }
+}

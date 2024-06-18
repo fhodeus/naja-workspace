@@ -1,0 +1,32 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/breakpoints';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/typography';
+@import '../../../../styles/mixins/remify';
+
+.calendar {
+    position: relative;
+
+    &__calendar-event-component {
+        background-color: var(--fc-event-bg-color);
+        border: 1px solid var(--fc-event-border-color);
+        border-radius: $radius--small;
+        font-weight: 600;
+        overflow: hidden;
+        padding: $space--2 $space--1;
+        text-overflow: ellipsis;
+    }
+
+    &__extended-props {
+        padding: $space--3;
+    }
+
+    &__scheduling-link {
+        text-decoration: none;
+    }
+
+    &__props-info{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

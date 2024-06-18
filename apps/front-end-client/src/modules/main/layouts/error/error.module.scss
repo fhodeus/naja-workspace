@@ -1,0 +1,31 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/typography';
+
+.error {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: $space--5;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100%;
+    text-align: center;
+
+    // Highlight top content - used on desktop
+    // -----------------------------------------
+    // &--highlight-content {
+    //     background: url('../../../../assets/backgrounds/highlight.png') left top no-repeat,
+    //         color-from-var($color-tertiary);
+    //     background-size: 100% auto;
+    // }
+
+    &__title {
+        @include set-font-size($font-size--1);
+        @include strong-text();
+    }
+
+    a {
+        color: color-from-var($color-action);
+    }
+}

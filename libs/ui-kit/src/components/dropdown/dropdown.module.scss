@@ -1,0 +1,71 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/colors';
+@import '../../styles/mixins/typography';
+@import '../../styles/mixins/breakpoints';
+@import '../../styles/mixins/remify';
+
+$color-dropdwon: color-from-var($secondary-color-100);
+$background-dropdown: color-from-var($primary-color-300);
+$border-dropdown: color-from-var($primary-color-500, 0.8);
+
+.dropdown {
+    $parent: &;
+    position: relative;
+
+    &--dark {
+        #{$parent}__field {
+            background: $background-dropdown;
+            border-radius: 8px;
+            color: $color-dropdwon;
+        }
+
+        #{$parent}__icon {
+            color: $color-dropdwon;
+        }
+    }
+
+    &__field {
+        @include set-font-size($font-size--5);
+        appearance: none;
+        background: $background-dropdown;
+        border: 1px solid $border-dropdown;
+
+        border-radius: $radius;
+        color:  color-from-var($secondary-color-100);
+        font-size: 14px;
+
+        font-weight: 400;
+        line-height: 22px;
+
+        margin: 0;
+
+        // TODO: Not accessible but designs do not have an alternative.
+        outline: none;
+
+        padding: $space--3;
+
+        width: 100%;
+
+        @include desktop() {
+            line-height: 20px;
+            padding: $space--2;
+        }
+
+        &--large {
+            @include strong-text();
+            @include set-font-size($font-size--base);
+
+            padding: $space--4;
+        }
+    }
+
+    &__icon {
+        color:  color-from-var($secondary-color-100);
+        pointer-events: none;
+        position: absolute;
+        right: $space--3;
+        top: 50%;
+        transform: translateY(-50%);
+        width: remify(11px);
+    }
+}

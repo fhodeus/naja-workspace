@@ -1,0 +1,65 @@
+{
+  "name": "@endeavour/configs",
+  "entries": [
+    {
+      "version": "1.1.0",
+      "tag": "@endeavour/configs_v1.1.0",
+      "date": "Tue, 21 Mar 2023 10:00:20 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "chore: update depend"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.0.3",
+      "tag": "@endeavour/configs_v1.0.3",
+      "date": "Mon, 20 Mar 2023 08:24:28 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "feat: update typescript"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.0.2",
+      "tag": "@endeavour/configs_v1.0.2",
+      "date": "Tue, 15 Feb 2022 16:43:19 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "add stylelint configuration"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.0.1",
+      "tag": "@endeavour/configs_v1.0.1",
+      "date": "Fri, 19 Nov 2021 08:38:22 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "modify configuration"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.0.0",
+      "tag": "@endeavour/configs_v1.0.0",
+      "date": "Wed, 17 Nov 2021 14:08:13 GMT",
+      "comments": {
+        "major": [
+          {
+            "comment": "Initial Version"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/breakpoints';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/typography';
+
+.web-cam {
+    &__container {
+        animation-fill-mode: backwards;
+
+        aspect-ratio: 1/1;
+        border-radius: $radius;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        width: 100px;
+    }
+
+    &__video {
+        min-height: 100%;
+
+        &--hasPhoto {
+            display: none;
+        }
+
+        &--hasCapture {
+            display: none;
+        }
+    }
+
+    &__photo {
+        display: none;
+
+        &--hasPhoto {
+            display: block;
+        }
+
+        &--hasCapture {
+            display: none;
+        }
+    }
+
+    &__capture-button {
+        bottom: $space--2;
+        position: absolute;
+        right: $space--2;
+
+        &--hasCapture {
+            display: none;
+        }
+    }
+
+    &__no-capture {
+        align-items: center;
+        background: color-from-var($secondary-color-400);
+        border: 2px dashed color-from-var($secondary-color-500);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        text-align: center;
+
+        width: 100%;
+    }
+}

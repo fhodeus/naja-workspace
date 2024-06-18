@@ -1,0 +1,344 @@
+{
+  "name": "@endeavour/cli",
+  "entries": [
+    {
+      "version": "1.3.3",
+      "tag": "@endeavour/cli_v1.3.3",
+      "date": "Mon, 19 Jun 2023 13:24:01 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": " update dependancies packages"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@endeavour/ensure-certificate\" to `1.1.3`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/library-builder\" to `2.0.2`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.3.2",
+      "tag": "@endeavour/cli_v1.3.2",
+      "date": "Fri, 21 Apr 2023 15:39:26 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "packages updates"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@endeavour/ensure-certificate\" to `1.1.2`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/library-builder\" to `2.0.1`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.3.1",
+      "tag": "@endeavour/cli_v1.3.1",
+      "date": "Thu, 30 Mar 2023 09:46:12 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@endeavour/ensure-certificate\" to `1.1.1`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/library-builder\" to `2.0.0`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.3.0",
+      "tag": "@endeavour/cli_v1.3.0",
+      "date": "Tue, 21 Mar 2023 10:00:20 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "chore: update depend"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@endeavour/ensure-certificate\" to `1.1.0`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/library-builder\" to `1.3.0`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/configs\" to `1.1.0`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/forward-env\" to `0.2.0`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.2.8",
+      "tag": "@endeavour/cli_v1.2.8",
+      "date": "Mon, 20 Mar 2023 08:24:28 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "feat: update typescript"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@endeavour/ensure-certificate\" to `1.0.11`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/library-builder\" to `1.2.7`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/configs\" to `1.0.3`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/forward-env\" to `0.1.5`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.2.7",
+      "tag": "@endeavour/cli_v1.2.7",
+      "date": "Mon, 20 Feb 2023 13:45:41 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "sort package file"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@endeavour/ensure-certificate\" to `1.0.10`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/library-builder\" to `1.2.6`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.2.6",
+      "tag": "@endeavour/cli_v1.2.6",
+      "date": "Tue, 08 Nov 2022 08:18:11 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@endeavour/ensure-certificate\" to `1.0.9`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.2.5",
+      "tag": "@endeavour/cli_v1.2.5",
+      "date": "Thu, 06 Oct 2022 13:41:45 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@endeavour/library-builder\" to `1.2.5`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/ensure-certificate\" to `1.0.8`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/forward-env\" to `0.1.4`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.2.4",
+      "tag": "@endeavour/cli_v1.2.4",
+      "date": "Thu, 06 Oct 2022 09:19:25 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "chore: update typescript"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@endeavour/library-builder\" to `1.2.4`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/ensure-certificate\" to `1.0.7`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/forward-env\" to `0.1.3`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.2.3",
+      "tag": "@endeavour/cli_v1.2.3",
+      "date": "Tue, 15 Feb 2022 16:43:19 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@endeavour/library-builder\" to `1.2.3`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/ensure-certificate\" to `1.0.6`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/forward-env\" to `0.1.2`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/configs\" to `1.0.2`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.2.2",
+      "tag": "@endeavour/cli_v1.2.2",
+      "date": "Tue, 15 Feb 2022 12:27:39 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Remove superflous log"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@endeavour/library-builder\" to `1.2.2`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/ensure-certificate\" to `1.0.5`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/forward-env\" to `0.1.1`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.2.1",
+      "tag": "@endeavour/cli_v1.2.1",
+      "date": "Mon, 14 Feb 2022 14:13:06 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "update dependencies"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@endeavour/library-builder\" to `1.2.1`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/ensure-certificate\" to `1.0.4`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.2.0",
+      "tag": "@endeavour/cli_v1.2.0",
+      "date": "Tue, 18 Jan 2022 08:24:41 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "make no replacment to env"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "add config env and build env support"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@endeavour/library-builder\" to `1.2.0`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/ensure-certificate\" to `1.0.3`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/forward-env\" to `0.1.0`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.1.1",
+      "tag": "@endeavour/cli_v1.1.1",
+      "date": "Fri, 14 Jan 2022 11:11:33 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@endeavour/library-builder\" to `1.1.0`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/ensure-certificate\" to `1.0.2`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.1.0",
+      "tag": "@endeavour/cli_v1.1.0",
+      "date": "Fri, 19 Nov 2021 08:38:22 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Ensure if after command fails then exit code is preserved"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@endeavour/library-builder\" to `1.0.1`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/ensure-certificate\" to `1.0.1`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/forward-env\" to `0.0.3`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/configs\" to `1.0.1`"
+          }
+        ]
+      }
+    },
+    {
+      "version": "1.0.0",
+      "tag": "@endeavour/cli_v1.0.0",
+      "date": "Wed, 17 Nov 2021 14:08:13 GMT",
+      "comments": {
+        "major": [
+          {
+            "comment": "Initial Version"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@endeavour/library-builder\" to `1.0.0`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/ensure-certificate\" to `1.0.0`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/forward-env\" to `0.0.2`"
+          },
+          {
+            "comment": "Updating dependency \"@endeavour/configs\" to `1.0.0`"
+          }
+        ]
+      }
+    }
+  ]
+}

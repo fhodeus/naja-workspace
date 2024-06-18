@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/colors';
+@import '../../styles/mixins/breakpoints';
+@import '../../styles/mixins/typography';
+
+$color-input: color-from-var($primary-color-400);
+$color-input-placeholder: color-from-var($primary-color-200);
+
+$background-input: color-from-var($secondary-color-300);
+
+.select {
+    font-family: $font-family;
+    @include set-font-size($font-size--2);
+    appearance: none;
+    background: $background-input;
+    border: 0;
+    border-radius: $radius;
+    color: $color-input;
+    font-weight: 600;
+    line-height: remify(20px);
+    margin: 0;
+
+    outline: none;
+    padding: calc($space--2 + 2px) $space--4;
+    position: relative;
+
+    width: 100%;
+
+    &__option {
+        line-height: remify(20px);
+    }
+
+    &__expand-more {
+
+        pointer-events: none;
+        position: absolute;
+        right: $space--4;
+        top: calc($space--2 + 2px);
+    }
+}

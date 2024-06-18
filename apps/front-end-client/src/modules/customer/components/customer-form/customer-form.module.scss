@@ -1,0 +1,21 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/breakpoints';
+@import '../../../../styles/mixins/typography';
+
+.customer-form {
+    position: relative;
+
+    &__button-container {
+        justify-content: flex-end;
+    }
+
+    &__client-name {
+        color: var(--color-black-100, #1c222f);
+        font-size: var(--font-size--heading-5, 1rem);
+        font-weight: 600;
+        gap: var(--space--small, 8px);
+        line-height: var(--line-height--heading-5, 1.5rem);
+        line-height: 28px;
+    }
+}

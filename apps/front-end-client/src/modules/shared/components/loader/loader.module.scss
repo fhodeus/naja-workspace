@@ -1,0 +1,62 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/typography';
+
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes opacity-animation {
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.loader {
+    &__loading-pulse {
+        align-items: center;
+        animation: pulse-animation 2s infinite;
+        aspect-ratio: 1/1;
+        background: color-from-var($primary-color-100);
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        padding: $space--2;
+    }
+
+    &__loading-icon {
+        color: color-from-var($secondary-color-base);
+    }
+
+    &__loading-wrapper {
+        animation: opacity-animation 2s ease-in-out infinite;
+        justify-content: center;
+    }
+
+    &__loading-text {
+        @include set-font-size($font-size--6);
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__loading-container {
+        display: grid;
+        gap: $space--1;
+        justify-content: center;
+        margin: $space--4 0 $space--2;
+    }
+}

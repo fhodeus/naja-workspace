@@ -1,0 +1,8 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/breakpoints';
+
+.financial-container {
+    display: grid;
+    gap: $space--4;
+}

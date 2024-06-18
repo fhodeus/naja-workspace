@@ -1,0 +1,48 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/breakpoints';
+
+.app {
+    min-height: 100vh;
+
+    min-width: 100%;
+
+    &__side-navigation {
+        backdrop-filter: blur(80px);
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translateY(-100%);
+        transition: transform 500ms ease-in-out;
+        z-index: 1;
+
+        &--visibile {
+            transform: translateY(0);
+        }
+    }
+
+    &__content {
+        margin: 0 auto;
+
+        &--full {
+            max-width: none;
+            padding: 0;
+        }
+    }
+
+    &__footer {
+        margin: 0 auto;
+        max-width: $page-max-width;
+        padding: $space--4 0 0;
+
+        @include desktop() {
+            padding: $space--4;
+        }
+    }
+
+    &__header {
+        position: sticky;
+        top: 0;
+        z-index: 9;
+    }
+}

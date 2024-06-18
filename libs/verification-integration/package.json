@@ -1,0 +1,20 @@
+{
+    "name": "@endeavour/verification-integration",
+    "version": "1.0.0",
+    "main": "./dist/index.js",
+    "type": "module",
+    "scripts": {
+        "build": "dragon build library",
+        "build:watch": "rushx build",
+        "test": "",
+        "lint": ""
+    },
+    "devDependencies": {
+        "@endeavour/cli": "workspace:*",
+        "@endeavour/configs": "workspace:*",
+        "typescript": "5.0.4"
+    },
+    "dependencies": {
+        "tslib": "^2.5.0"
+    }
+}

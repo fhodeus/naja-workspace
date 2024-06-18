@@ -1,0 +1,21 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/breakpoints';
+
+.financial-container {
+    display: grid;
+    gap: $space--4;
+
+    &__box-content{
+        width: 100%;
+    }
+
+    &__button-navigate{
+        margin-left: auto;
+    }
+
+    &__header{
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+}

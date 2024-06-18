@@ -1,0 +1,58 @@
+@import '../variables';
+@import './colors';
+@import './breakpoints';
+@import './typography';
+@import './scroll';
+
+@mixin table($separate: false) {
+    border-collapse: collapse;
+    min-width: 100%;
+
+    @if ($separate) {
+        border-collapse: separate;
+        border-spacing: 0 $space--3;
+        width: 100%;
+    }
+}
+
+@mixin table-header($allowBreak: true) {
+    @include strong-text();
+    padding: 0 $space--4;
+    text-align: center;
+
+    @if ($allowBreak !=true) {
+        white-space: nowrap;
+    }
+
+    &:first-child {
+        text-align: left;
+    }
+}
+
+@mixin table-row-divider() {
+    box-shadow: var(
+        --shadow-medium-soft--bottom,
+        0 0 1px rgba(10, 31, 68, 0.08),
+        0 8px 10px rgba(10, 31, 68, 0.09)
+    );
+    width: 100%;
+}
+
+@mixin table-cell($allowBreak: true) {
+    padding: $space--3 $space--4;
+    text-align: center;
+    vertical-align: middle;
+
+    @if ($allowBreak !=true) {
+        white-space: nowrap;
+    }
+
+    &:first-child {
+        border-radius: $radius--small 0 0 $radius--small;
+        text-align: left;
+    }
+
+    &:last-child {
+        border-radius: 0 $radius--small $radius--small 0;
+    }
+}

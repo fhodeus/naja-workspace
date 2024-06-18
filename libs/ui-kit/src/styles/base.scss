@@ -1,0 +1,33 @@
+@import './reset';
+@import './mixins/colors';
+@import './mixins/typography';
+@import './variables';
+@import './fonts';
+@import './material-symbols';
+
+html {
+    @include content-text();
+    font-family: $font-family;
+}
+
+body {
+    color: color-from-var($primary-color-400);
+    font-size: 16px;
+    line-height: 1;
+}
+
+p {
+    line-height: 1.5;
+}
+
+body:fullscreen {
+    overflow: auto;
+}
+
+body:full-screen {
+    overflow: auto;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}

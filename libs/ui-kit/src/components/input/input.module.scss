@@ -1,0 +1,94 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/colors';
+@import '../../styles/mixins/breakpoints';
+@import '../../styles/mixins/typography';
+
+$color-input: color-from-var($primary-color-400);
+$color-input-placeholder: color-from-var($primary-color-200);
+$color-input-disabled: color-from-var($grays-color-500);
+
+$background-input: color-from-var($secondary-color-300);
+$background-input-disabled: color-from-var($grays-color-300, 0.8);
+
+.input {
+    @include set-font-size($font-size--2);
+    background: $background-input;
+    border: 0;
+    border-radius: $radius;
+    color: $color-input;
+    font-weight: 600;
+    line-height: remify(20px);
+    margin: 0;
+
+    // TODO: Not accessible but designs do not have an alternative.
+    outline: none;
+
+    padding: calc($space--2 + 2px) $space--4;
+
+    width: 100%;
+
+    &::placeholder {
+        color: $color-input-placeholder;
+    }
+
+    &--compact {
+        height: 100%;
+        padding: $space--1;
+    }
+
+    &--disabled {
+        background: $background-input-disabled;
+
+        color: $color-input-disabled;
+    }
+
+    &[type='date'] {
+        appearance: none;
+        font-family: inherit;
+        line-height: remify(18px);
+
+        position: relative;
+
+        &::-webkit-calendar-picker-indicator {
+            background: transparent;
+            bottom: 0;
+
+            color: transparent;
+            cursor: pointer;
+            height: 100%;
+            left: 0;
+
+            padding: calc($space--3 - 2px) $space--3 calc($space--3 - 2px) $space--3;
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            width: auto;
+        }
+
+        &::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='21' viewBox='0 0 20 21' fill='inherit'%3E%3Cmask id='mask0_165_479' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='21'%3E%3Crect y='0.869507' width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_165_479)'%3E%3Cpath d='M4.5 18.8695C4.0875 18.8695 3.73437 18.7202 3.44062 18.4216C3.14687 18.123 3 17.7723 3 17.3695V6.36951C3 5.96673 3.14687 5.61603 3.44062 5.31742C3.73437 5.01881 4.0875 4.86951 4.5 4.86951H6V2.86951H7.5V4.86951H12.5V2.86951H14V4.86951H15.5C15.9125 4.86951 16.2656 5.01881 16.5594 5.31742C16.8531 5.61603 17 5.96673 17 6.36951V17.3695C17 17.7723 16.8531 18.123 16.5594 18.4216C16.2656 18.7202 15.9125 18.8695 15.5 18.8695H4.5ZM4.5 17.3695H15.5V9.86951H4.5V17.3695ZM4.5 8.36951H15.5V6.36951H4.5V8.36951Z' fill='inherit'/%3E%3C/g%3E%3C/svg%3E");
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            content: ' ';
+            height: 100%;
+
+            padding-top: calc($space--3 - 2px);
+
+            pointer-events: none;
+            position: absolute;
+
+            right: 16px;
+            top: 0;
+            width: 20px;
+        }
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        appearance: none;
+        margin: 0;
+        /* <-- Apparently some margin are still there even though it's hidden */
+    }
+}

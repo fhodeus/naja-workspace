@@ -1,0 +1,62 @@
+@import '../variables';
+@import './colors';
+@import './breakpoints';
+@import './typography';
+@import './scroll';
+
+@mixin table() {
+    border-collapse: collapse;
+    min-width: 100%;
+}
+
+@mixin table-header($allowBreak: true) {
+    @include strong-text();
+    background: color-from-var($table-heading-bg);
+    padding: $space--6;
+    text-align: left;
+
+    @if ($allowBreak !=true) {
+        white-space: nowrap;
+    }
+
+    @include desktop() {
+        border: 0;
+        font-weight: normal;
+        padding: $space--6 $space--8;
+    }
+
+    &:first-child {
+        border-bottom: 4px solid
+            color-from-var(var(--interaction-color-700, $_interaction-color-700));
+        border-top-left-radius: $radius--small;
+    }
+
+    &:not(:first-child) {
+        border-bottom: 2px solid color-from-var($primary-color-500);
+    }
+
+    &:last-child {
+        border-top-right-radius: $radius--small;
+    }
+}
+
+@mixin table-row-divider() {
+    width: 100%;
+
+    &:nth-child(even) {
+        background: color-from-var($background-color--info-box, 0.5);
+    }
+}
+
+@mixin table-cell($allowBreak: true) {
+    padding: $space--4 $space--6;
+    vertical-align: middle;
+
+    @include desktop() {
+        padding: $space--6 $space--8;
+    }
+
+    @if ($allowBreak !=true) {
+        white-space: nowrap;
+    }
+}

@@ -1,0 +1,11 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/breakpoints';
+
+.dashboard-header {
+    background: #fff;
+    // border-bottom: $space--1 solid color-from-var($grays-color-100);
+    box-shadow:  0 1px 3px rgba(10, 31, 68, .09);
+    padding: $space--6;
+    position: relative;
+}

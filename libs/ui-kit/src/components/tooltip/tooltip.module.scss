@@ -1,0 +1,86 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/colors';
+
+$show-tooltip: var(--show-tooltip, #{none});
+
+.tooltip {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    &:hover {
+        --show-tooltip: block;
+    }
+
+    &:focus-within {
+        --show-tooltip: block;
+    }
+
+    &__tooltip-content {
+        background-color: color-from-var($primary-color-400);
+        border: 1px solid color-from-var($primary-color-400);
+        border-radius: $radius;
+        color: color-from-var($secondary-color-400);
+        display: $show-tooltip;
+
+        line-height: 1;
+        max-width: 600px;
+        padding: $space--1;
+        position: absolute;
+       
+        z-index: 1000;
+
+        &::before {
+            background-color: color-from-var($primary-color-400);
+            content: ' ';
+            height: 14px;
+            pointer-events: none;
+            position: absolute;
+            transform: rotate(45deg);
+            width: 16px;
+            z-index: -1;
+        }
+
+        &--bottom {
+            top: 100%;
+            transform: translateY(12px);
+
+            &::before {
+                left: 20px;
+                top: -7px;
+            }
+        }
+
+        &--top {
+            bottom: 100%;
+            transform: translateY(-12px);
+
+            &::before {
+                bottom: -7px;
+                left: 20px;
+            }
+        }
+
+        &--left {
+            right: 100%;
+            top: 0;
+            transform: translateX(-12px);
+
+            &::before {
+                right: -7px;
+                top: 25%;
+            }
+        }
+
+        &--right {
+            left: 100%;
+            top: 0;
+            transform: translateX(12px);
+
+            &::before {
+                left: -7px;
+                top: 25%;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+
+.nav-dropdown-item {
+    color: color-from-var($color-tertiary--contrast);
+    font-variant: small-caps;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    padding: $space--1;
+    text-decoration: none;
+    text-transform: lowercase;
+
+    &--active,
+    &:hover {
+        color: color-from-var($color-primary);
+    }
+}

@@ -1,0 +1,146 @@
+@import './mixins/remify';
+@import './design_system.variables';
+
+$breakpoints: (
+    phablet: 500px,
+    tablet: 768px,
+    desktop: 1024px,
+    large: 1400px,
+);
+
+// Default values as SASS values.
+
+$_font-family: "Inter", 'Roboto', sans-serif;
+
+$_font-size--10: remify(40px);
+$_font-size--9: remify(36px);
+$_font-size--8: remify(32px);
+$_font-size--7: remify(28px);
+$_font-size--6: remify(24px);
+$_font-size--5: remify(20px);
+$_font-size--4: remify(18px);
+$_font-size--base: remify(16px);
+$_font-size--2: remify(14px);
+$_font-size--1: remify(8px);
+
+$_space--10: remify(40px);
+$_space--9: remify(36px);
+$_space--8: remify(32px);
+$_space--7: remify(28px);
+$_space--6: remify(24px);
+$_space--5: remify(20px);
+$_space--4: remify(16px);
+$_space--3: remify(12px);
+$_space--2: remify(8px);
+$_space--1: remify(4px);
+
+$_page-max-width: remify(1200px);
+$_page-max-width--small: remify(650px);
+
+$_rounded: 1000px;
+
+// CSS Variable definitions for use in components
+
+$font-family: var(--font-family, #{$_font-family});
+
+$font-weight--strong: var(--font-weight--strong, 700);
+$font-weight--heading: var(--font-weight--strong, 600);
+$font-weight--medium: var(--font-weight--medium, 500);
+$font-weight--content: var(--font-weight--content, 400);
+
+$font-size--10: var(--font-size--10, #{$_font-size--10});
+$font-size--9: var(--font-size--9, #{$_font-size--9});
+$font-size--8: var(--font-size--8, #{$_font-size--8});
+$font-size--7: var(--font-size--7, #{$_font-size--7});
+$font-size--6: var(--font-size--6, #{$_font-size--6});
+$font-size--5: var(--font-size--5, #{$_font-size--5});
+$font-size--4: var(--font-size--4, #{$_font-size--4});
+$font-size--base: var(--font-size--base, #{$_font-size--base});
+$font-size--2: var(--font-size--2, #{$_font-size--2});
+$font-size--1: var(--font-size--1, #{$_font-size--1});
+
+$space--10: var(--space--10, #{$_space--10});
+$space--9: var(--space--9, #{$_space--9});
+$space--8: var(--space--8, #{$_space--8});
+$space--7: var(--space--7, #{$_space--7});
+$space--6: var(--space--6, #{$_space--6});
+$space--5: var(--space--5, #{$_space--5});
+$space--4: var(--space--4, #{$_space--4});
+$space--3: var(--space--3, #{$_space--3});
+$space--2: var(--space--2, #{$_space--2});
+$space--1: var(--space--1, #{$_space--1});
+
+$page-max-width: var(--page-max-width, #{$_page-max-width});
+$page-max-width--small: var(--page-max-width--small, #{$_page-max-width--small});
+
+$radius--small: var(--radius--small, #{$_space--1});
+$radius: var(--radius, #{$_space--2});
+$radius--large: var(--radius--large, #{$_space--4});
+$rounded: var(--rounded, #{$_rounded});
+
+// CSS Variable color`s definitions for use in components
+
+// primary-color
+$primary-color-100: var(--primary-color-100, #{$_primary-color-100});
+$primary-color-200: var(--primary-color-200, #{$_primary-color-200});
+$primary-color-300: var(--primary-color-300, #{$_primary-color-300});
+$primary-color-400: var(--primary-color-400, #{$_primary-color-400});
+$primary-color-500: var(--primary-color-500, #{$_primary-color-500});
+
+// secondary-color
+$secondary-color-100: var(--secondary-color-100, #{$_secondary-color-100});
+$secondary-color-200: var(--secondary-color-200, #{$_secondary-color-200});
+$secondary-color-300: var(--secondary-color-300, #{$_secondary-color-300});
+$secondary-color-400: var(--secondary-color-400, #{$_secondary-color-400});
+$secondary-color-500: var(--secondary-color-500, #{$_secondary-color-500});
+
+// interaction-color
+$interaction-color-100: var(--interaction-color-100, #{$_interaction-color-100});
+$interaction-color-200: var(--interaction-color-200, #{$_interaction-color-200});
+$interaction-color-300: var(--interaction-color-300, #{$_interaction-color-300});
+$interaction-color-400: var(--interaction-color-400, #{$_interaction-color-400});
+$interaction-color-500: var(--interaction-color-500, #{$_interaction-color-500});
+
+// grays-color
+$grays-color-100: var(--grays-color-100, #{$_grays-color-100});
+$grays-color-200: var(--grays-color-200, #{$_grays-color-200});
+$grays-color-300: var(--grays-color-300, #{$_grays-color-300});
+$grays-color-400: var(--grays-color-400, #{$_grays-color-400});
+$grays-color-500: var(--grays-color-500, #{$_grays-color-500});
+
+// complementary-color
+$complementary-color-100: var(--complementary-color-100, #{$_complementary-color-100});
+$complementary-color-200: var(--complementary-color-200, #{$_complementary-color-200});
+$complementary-color-300: var(--complementary-color-300, #{$_complementary-color-300});
+$complementary-color-400: var(--complementary-color-400, #{$_complementary-color-400});
+$complementary-color-500: var(--complementary-color-500, #{$_complementary-color-500});
+
+// $color-success
+$color-success-100: var(--color-success-100, #{$_color-success-100});
+$color-success-200: var(--color-success-200, #{$_color-success-200});
+$color-success-300: var(--color-success-300, #{$_color-success-300});
+$color-success-400: var(--color-success-400, #{$_color-success-400});
+$color-success-500: var(--color-success-500, #{$_color-success-500});
+
+// $color-alert
+$function-color-alert: var(--color-alert, #{$_color-alert-500});
+$color-alert-100: var(--color-alert-100, #{$_color-alert-100});
+$color-alert-200: var(--color-alert-200, #{$_color-alert-200});
+$color-alert-300: var(--color-alert-300, #{$_color-alert-300});
+$color-alert-400: var(--color-alert-400, #{$_color-alert-400});
+$color-alert-500: var(--color-alert-500, #{$_color-alert-500});
+
+// $color-danger
+$color-danger-100: var(--color-danger-100, #{$_color-danger-100});
+$color-danger-200: var(--color-danger-200, #{$_color-danger-200});
+$color-danger-300: var(--color-danger-300, #{$_color-danger-300});
+$color-danger-400: var(--color-danger-400, #{$_color-danger-400});
+$color-danger-500: var(--color-danger-500, #{$_color-danger-500});
+
+
+// $color-info
+$color-info-100: var(--color-info-100, #{$_color-info-100});
+$color-info-200: var(--color-info-200, #{$_color-info-200});
+$color-info-300: var(--color-info-300, #{$_color-info-300});
+$color-info-400: var(--color-info-400, #{$_color-info-400});
+$color-info-500: var(--color-info-500, #{$_color-info-500});
