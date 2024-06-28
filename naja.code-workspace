@@ -3,13 +3,25 @@
     "folders": [
         // Frontend
         {
-            "name": "🌐 Front End Cliente",
+            "name": "🌐 Front End Client",
             "path": "./apps/front-end-client"
+        },
+        {
+            "name": "🌐 Mobile Client Example",
+            "path": "./apps/mobile-app"
+        },
+        {
+            "name": "🌐 Mobile Client",
+            "path": "./apps/mobile-client-app"
         },
         // Services
         {
-            "name": "🛰️ Back-end",
+            "name": "🛰️ Back-end TypeStack",
             "path": "./services/back-end-api"
+        },
+        {
+            "name": "🛰️ Back-end NestJS",
+            "path": "./services/project-nest"
         },
         {
             "name": "🐋 Keycloak",

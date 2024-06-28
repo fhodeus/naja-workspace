@@ -1,0 +1,8 @@
+{
+    "error.not-found.message": "We're unable to find the page you requested. <home>Click here to return to the homepage</home>.",
+    "error.not-found.title": "404 Not Found",
+    "error.not-service.message": "We're unable to find the page you requested. <home>Click here to return to the homepage</home>.",
+    "error.not-service.title": "Oops! It appears that our system is momentarily down. We are working to resolve this. Come back soon!",
+    "page.title": "Front-end-client",
+    "dashboard.components.menu.language": "Language"
+}

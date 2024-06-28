@@ -12,6 +12,6 @@
     },
     "devDependencies": {
         "@endeavour/configs": "workspace:*",
-        "@types/node": "18.15.3"
+        "@types/node": "^20.11.16"
     }
 }

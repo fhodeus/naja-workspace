@@ -1,0 +1,104 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/breakpoints';
+@import '../../../../styles/mixins/typography';
+
+$border-divisor-color: color-from-var($grays-color-100);
+
+.menu {
+    border-right: 1px solid $border-divisor-color;
+
+    border-right: 1px solid $border-divisor-color;
+
+    display: grid;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
+
+    height: 100%;
+    height: 100%;
+    max-height: 100dvh;
+    position: relative;
+    position: relative;
+
+    &__header {
+        padding: $space--6;
+    }
+
+    &__footer {
+        padding: $space--6 $space--4 $space--4;
+    }
+
+    &__to-logout {
+        justify-content: space-between;
+    }
+
+    &__user-agent {
+        align-items: center;
+        display: flex;
+        gap: $space--2;
+        justify-content: flex-start;
+    }
+
+    &__name-icon {
+        @include set-font-size($font-size--4);
+        aspect-ratio: 1/1;
+        background-color: color-from-var($secondary-color-300);
+        border-radius: 100%;
+        color: color-from-var($primary-color-400);
+        display: flex;
+        font-weight: 600;
+        padding: $space--3;
+        vertical-align: middle;
+    }
+
+    &__name {
+        @include set-font-size($font-size--4);
+        @include strong-text();
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__email {
+        @include set-font-size($font-size--5);
+        font-weight: 500;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__footer-content {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__actions {
+        position: relative;
+    }
+
+    &__action-content {
+        bottom: 0;
+        left: calc(100% + $space--2);
+        padding-bottom: $space--2;
+        position: absolute;
+
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    &__action-title {
+        @include set-font-size($font-size--6);
+        font-weight: 600;
+        padding: 0 $space--3;
+        text-transform: uppercase;
+    }
+
+    &__user-info {
+        max-width: 17ch;
+    }
+
+    &__language-flag{
+        max-width: 24px;
+    }
+}

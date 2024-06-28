@@ -1,6 +1,6 @@
 import { Inject, Service } from 'typedi';
 import { JWT_SECRET_PASSWORD, JWT_SECRET_USERNAME } from '../../../loaders/keycloakConnectLoader';
-import { KeycloakAdminClient } from '@endeavour/keycloak-sdk';
+import KeycloakAdminClient from '@endeavour/keycloak-sdk';
 
 @Service()
 export class KeycloakClient extends KeycloakAdminClient {

@@ -1,0 +1,8 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/breakpoints';
+
+.menu-navigation {
+    padding: $space--4;
+    position: relative;
+}

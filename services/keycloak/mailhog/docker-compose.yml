@@ -1,0 +1,16 @@
+version: '3.6'
+
+services:
+  mailhog-keycloak:
+    image: mailhog/mailhog
+    container_name: mailhog-keycloak
+    logging:
+      driver: 'none'  # disable saving logs
+    ports:
+      - 1025:1025 # smtp server
+      - 8025:8025 # web ui
+    networks:
+      - dev_network
+
+networks:
+  dev_network:

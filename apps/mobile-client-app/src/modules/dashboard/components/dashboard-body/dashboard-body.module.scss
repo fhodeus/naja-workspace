@@ -1,0 +1,18 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/breakpoints';
+@import '../../../../styles/mixins/scroll';
+
+.dashboard-body {
+    @include scroll();
+    overflow-y: scroll;
+
+    &__content {
+        margin: 0 auto;
+        max-width: $page-max-width;
+
+        padding: $space--6 $space--10;
+        position: relative;
+        width: 100%;
+    }
+}

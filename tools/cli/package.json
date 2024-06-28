@@ -28,10 +28,10 @@
         "@endeavour/configs": "workspace:*",
         "@endeavour/forward-env": "workspace:*",
         "@oclif/dev-cli": "^1",
-        "@types/node": "18.15.3",
+        "@types/node": "^20.11.16",
         "rollup": "^3.19.1",
-        "ts-node": "^10.8.0",
-        "typescript": "5.0.4",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.3.3",
         "esbuild": "~0.17.12",
         "rollup-plugin-esbuild": "^5.0.0"
     },

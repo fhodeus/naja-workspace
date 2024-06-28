@@ -135,6 +135,30 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "@nestjs/cli",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@nestjs/common",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@nestjs/core",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@nestjs/platform-express",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@nestjs/schematics",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@nestjs/testing",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "@oclif/command",
       "allowedCategories": [ "tools" ]
     },
@@ -243,6 +267,14 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "@swc/cli",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@swc/core",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "@testing-library/jest-dom",
       "allowedCategories": [ "production", "tools" ]
     },
@@ -261,6 +293,10 @@
     {
       "name": "@types/babel__template",
       "allowedCategories": [ "tools" ]
+    },
+    {
+      "name": "@types/chai",
+      "allowedCategories": [ "production" ]
     },
     {
       "name": "@types/compression",
@@ -291,7 +327,15 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "@types/lodash-es",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "@types/marked",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@types/mocha",
       "allowedCategories": [ "production" ]
     },
     {
@@ -320,6 +364,10 @@
     },
     {
       "name": "@types/react-slick",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@types/supertest",
       "allowedCategories": [ "production" ]
     },
     {
@@ -392,6 +440,14 @@
     },
     {
       "name": "bcrypt",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "camelize-ts",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "chai",
       "allowedCategories": [ "production" ]
     },
     {
@@ -571,11 +627,19 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "lodash-es",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "marked",
       "allowedCategories": [ "production" ]
     },
     {
       "name": "microframework-w3tec",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "mocha",
       "allowedCategories": [ "production" ]
     },
     {
@@ -715,6 +779,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "rxjs",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "sass",
       "allowedCategories": [ "production" ]
     },
@@ -728,6 +796,10 @@
     },
     {
       "name": "slick-carousel",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "source-map-support",
       "allowedCategories": [ "production" ]
     },
     {
@@ -751,6 +823,10 @@
       "allowedCategories": [ "tools" ]
     },
     {
+      "name": "supertest",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "swagger-ui-express",
       "allowedCategories": [ "production" ]
     },
@@ -759,8 +835,20 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "ts-jest",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "ts-loader",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "ts-node",
       "allowedCategories": [ "production", "tools" ]
+    },
+    {
+      "name": "tsconfig-paths",
+      "allowedCategories": [ "production" ]
     },
     {
       "name": "tslib",
@@ -793,6 +881,14 @@
     {
       "name": "typescript",
       "allowedCategories": [ "production", "tools" ]
+    },
+    {
+      "name": "url-join",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "url-template",
+      "allowedCategories": [ "production" ]
     },
     {
       "name": "urql",

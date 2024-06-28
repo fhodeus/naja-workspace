@@ -20,7 +20,6 @@ import { DeleteResult } from 'typeorm';
 import { ErrorHandlerMiddleware } from '../middlewares/error.middleware';
 import { EmailService } from '../services/email/gateway/email.adapter';
 import { UserEmail } from '../services/email/user.email';
-import { KeycloakClient } from '../services/keycloak/keycloak.service';
 
 @Service()
 @Authorized()
@@ -31,7 +30,6 @@ export class UserController {
         private userService: UserService,
         private emailService: EmailService,
         private customerEmail: UserEmail,
-        private _keycloakClient: KeycloakClient,
     ) {}
 
     @Get()
@@ -44,7 +42,6 @@ export class UserController {
     ): Promise<GenericResponse<User[]>> {
         const users = await this.userService.find(query.name, query.document);
         
-       console.log(this._keycloakClient);
         return { content: users };
     }
 

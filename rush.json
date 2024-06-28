@@ -369,6 +369,12 @@
             "shouldPublish": true
         },
         {
+            "packageName": "@endeavour/project-nest",
+            "projectFolder": "services/project-nest",
+            "reviewCategory": "production",
+            "shouldPublish": true
+        },
+        {
             "packageName": "@endeavour/front-end-client",
             "projectFolder": "apps/front-end-client",
             "reviewCategory": "production",

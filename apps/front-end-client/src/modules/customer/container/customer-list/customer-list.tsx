@@ -15,6 +15,7 @@ import {
 import type { UserResponse } from '@endeavour/verification-integration';
 
 import { customerService } from '../../../../service/customer.service';
+import { KeycloakClient } from '../../../../service/keycloak';
 import { useDashboardHeader } from '../../../main/hooks/use-dashboard-header';
 import { useGuardRole } from '../../../main/hooks/use-guard-role';
 import { Loader } from '../../../shared/components/loader/loader';
@@ -56,6 +57,16 @@ export const CustomerListContainer = () => {
             [],
         ),
     );
+
+    const keycloaktest = useCallback(async () => {
+        const userskeycloak = await KeycloakClient.users.find({ first: 0, max: 10 });
+
+        console.log(userskeycloak);
+    }, []);
+
+    useEffect(() => {
+        keycloaktest();
+    }, [keycloaktest]);
 
     const isEditable = useGuardRole('admin');
 
