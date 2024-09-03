@@ -135,6 +135,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "@nestjs/cache-manager",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "@nestjs/cli",
       "allowedCategories": [ "production" ]
     },
@@ -143,7 +147,19 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "@nestjs/config",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "@nestjs/core",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@nestjs/jwt",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@nestjs/mapped-types",
       "allowedCategories": [ "production" ]
     },
     {
@@ -156,6 +172,10 @@
     },
     {
       "name": "@nestjs/testing",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@nestjs/typeorm",
       "allowedCategories": [ "production" ]
     },
     {
@@ -440,6 +460,10 @@
     },
     {
       "name": "bcrypt",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "cache-manager-redis-yet",
       "allowedCategories": [ "production" ]
     },
     {
@@ -756,6 +780,10 @@
     },
     {
       "name": "reflect-metadata",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "rimraf",
       "allowedCategories": [ "production" ]
     },
     {

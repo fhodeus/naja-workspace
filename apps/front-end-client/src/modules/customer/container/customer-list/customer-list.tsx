@@ -15,11 +15,10 @@ import {
 import type { UserResponse } from '@endeavour/verification-integration';
 
 import { customerService } from '../../../../service/customer.service';
-import { KeycloakClient } from '../../../../service/keycloak';
 import { useDashboardHeader } from '../../../main/hooks/use-dashboard-header';
 import { useGuardRole } from '../../../main/hooks/use-guard-role';
+import { ContextLink } from '../../../shared/components/context-link/context-link';
 import { Loader } from '../../../shared/components/loader/loader';
-import { useContextNavigate } from '../../../shared/hooks/use-context-navigate';
 import { createStyleHelper } from '../../../shared/utils/class-names';
 import { CustomerListComponent } from '../../components/customer-list/customer-list';
 
@@ -31,10 +30,10 @@ export const CustomerListContainer = () => {
     const [clientes, setClientes] = useState<UserResponse[]>([]);
     const [loading, setLoading] = useState(true);
 
-    const fetch = useCallback(async (data?: { name?: string; document?: string }) => {
+    const fetch = useCallback(async (params?: { name?: string; document?: string }) => {
         setLoading(true);
 
-        const { content } = await customerService.getAllCustomers({ params: data });
+        const { content } = await customerService.getAllCustomers({ params });
         setLoading(false);
 
         setClientes(content);
@@ -43,8 +42,6 @@ export const CustomerListContainer = () => {
     useEffect(() => {
         fetch();
     }, [fetch]);
-
-    const navigate = useContextNavigate();
 
     const { register, handleSubmit } = useForm(
         useMemo(
@@ -58,21 +55,7 @@ export const CustomerListContainer = () => {
         ),
     );
 
-    const keycloaktest = useCallback(async () => {
-        const userskeycloak = await KeycloakClient.users.find({ first: 0, max: 10 });
-
-        console.log(userskeycloak);
-    }, []);
-
-    useEffect(() => {
-        keycloaktest();
-    }, [keycloaktest]);
-
     const isEditable = useGuardRole('admin');
-
-    const toProfile = useCallback(() => {
-        navigate('/dashboard/customer/create');
-    }, [navigate]);
 
     useDashboardHeader('Lista de Usuários');
 
@@ -81,14 +64,11 @@ export const CustomerListContainer = () => {
             <Gap direction="horizontal" className={style('page-title-container')}>
                 <Title>Clientes</Title>
                 {isEditable ? (
-                    <Button
-                        size={ButtonSize.SMALL}
-                        variant={ButtonVariant.ACTION}
-                        onClick={toProfile}
-                        hasIcon
-                    >
-                        <MaterialSymbol name="add" />
-                    </Button>
+                    <ContextLink to={'/dashboard/customer/create'}>
+                        <Button size={ButtonSize.SMALL} variant={ButtonVariant.ACTION} hasIcon>
+                            <MaterialSymbol name="add" />
+                        </Button>
+                    </ContextLink>
                 ) : null}
             </Gap>
             <Divider />
@@ -96,7 +76,6 @@ export const CustomerListContainer = () => {
                 <Box className={style('filter')}>
                     <Input {...register('name')} placeholder="Nome" />
                     <Input {...register('document')} placeholder="Documento" />
-
                     <Button type="submit" variant={ButtonVariant.ACTION} hasIcon>
                         <MaterialSymbol name="filter_alt" />
                     </Button>

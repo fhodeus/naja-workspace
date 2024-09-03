@@ -1,3 +1,12 @@
 {
-    "TENANT_ID": ""
+    "TENANT_ID": "",
+    "AUTH_ENDPOINT": "https://auth.localhost:8443/",
+    "API_ENDPOINT": "http://localhost:3001",
+    "BASE_URL": "https://front-end-client.localhost:3000",
+    "KEYCLOAK_REALM": "naja",
+    "KEYCLOAK_CLIENT_ID": "naja-workspace",
+    "DEFAULT_LANGUAGE": "pt-BR",
+    "DEFAULT_LOCALE": "pt-BR",
+    "AVAILABLE_LOCALES": ["en-US", "pt-BR"],
+    "ASSET_URL": ""
 }

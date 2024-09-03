@@ -18,6 +18,7 @@ import { customerService } from '../../../../service/customer.service';
 import { RolesGuard } from '../../../main/guards/roles-guard';
 // import { WebCamComponent } from '../../../shared/components/web-cam/web-cam';
 import { ContextNavLink } from '../../../shared/components/context-nav-link/context-nav-link';
+import { JavascriptStructure } from '../../../shared/components/javascript-structure/javascript-structure';
 import { createStyleHelper } from '../../../shared/utils/class-names';
 import { CustomerInfo } from '../../components/customer-info/customer-info';
 import { PetSectionComponent } from '../pet-section/pet-section';
@@ -76,14 +77,18 @@ export const CustomerPageComponent = ({ customer }: { customer: UserResponse }) 
                     <Divider />
                     <CustomerInfo customer={customer} />
                     <Divider />
-                    <div className={style('client-info-footer')}>footer</div>
+                    <div className={style('client-info-footer')}>
+                        <JavascriptStructure data={customer} />
+                    </div>
                 </Gap>
             </Box>
             <Box>
                 <Gap>
                     <PetSectionComponent customer={customer} />
                     <Divider />
-                    <div className={style('client-info-footer')}>footer</div>
+                    <div className={style('client-info-footer')}>
+                        <JavascriptStructure data={customer.pets} />
+                    </div>
                 </Gap>
             </Box>
         </Gap>

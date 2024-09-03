@@ -20,6 +20,7 @@
     },
     "dependencies": {
         "@endeavour/ui-kit": "workspace:*",
+        "@endeavour/keycloak-sdk": "workspace:",
         "@formatjs/intl-getcanonicallocales": "^2.2.1",
         "@formatjs/intl-locale": "^3.3.2",
         "@formatjs/intl-pluralrules": "^5.2.4",
@@ -50,17 +51,16 @@
         "@fullcalendar/daygrid": "~6.1.8",
         "@fullcalendar/interaction": "~6.1.8",
         "@fullcalendar/timegrid": "~6.1.8",
-        "react-webcam": "~7.2.0",
-        "@endeavour/keycloak-sdk": "workspace:"
+        "react-webcam": "~7.2.0"
     },
     "devDependencies": {
         "@endeavour/verification-integration": "workspace:",
-        "@arthurgeron/eslint-plugin-react-usememo": "2.3.1",
-        "@babel/core": "^7.22.5",
-        "@babel/plugin-transform-react-jsx": "7.22.5",
         "@endeavour/cli": "workspace:*",
         "@endeavour/configs": "workspace:*",
         "@endeavour/forward-env": "workspace:*",
+        "@arthurgeron/eslint-plugin-react-usememo": "2.3.1",
+        "@babel/core": "^7.22.5",
+        "@babel/plugin-transform-react-jsx": "7.22.5",
         "eslint": "~8.42.0",
         "eslint-config-prettier": "^9.1.0",
         "eslint-import-resolver-typescript": "^3.5.5",

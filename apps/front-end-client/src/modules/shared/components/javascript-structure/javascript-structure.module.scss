@@ -1,0 +1,17 @@
+
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins/colors';
+@import '../../../../styles/mixins/scroll';
+
+.javascript-structure {
+    background: #eef1f6;
+    padding: 1rem;
+    font-size: 12px;
+    line-height: 1.1;
+    border-radius: $radius--small;
+    max-height: 400px;
+   
+    overflow: auto;
+
+    @include  scroll();
+}

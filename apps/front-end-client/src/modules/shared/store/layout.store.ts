@@ -6,6 +6,7 @@ import type { RootState } from '../../main/store/root.store';
 interface ILayoutState {
     isMainMenuOpen: boolean;
     isFullscreen: boolean;
+    isViewStructure: boolean;
     name: string;
 }
 
@@ -14,6 +15,7 @@ export const layoutStore = createSlice({
     initialState: {
         isMainMenuOpen: false,
         isFullscreen: false,
+        isViewStructure: false,
         name: '',
     } as ILayoutState,
     reducers: {
@@ -22,6 +24,9 @@ export const layoutStore = createSlice({
         },
         setFullscreen(state, action: PayloadAction<boolean>) {
             state.isFullscreen = action.payload;
+        },
+        setViewStructure(state, action: PayloadAction<boolean>) {
+            state.isViewStructure = action.payload;
         },
         setDashboardHeader(state, action: PayloadAction<string>){
             state.name = action.payload;
@@ -41,6 +46,11 @@ export const selectIsMainMenuOpen = createSelector(
 export const selectFullscreen = createSelector(
     selectLayoutStore,
     (layoutState) => layoutState.isFullscreen,
+);
+
+export const selectViewStructure = createSelector(
+    selectLayoutStore,
+    (layoutState) => layoutState.isViewStructure,
 );
 
 export const selectDashboardName = createSelector(

@@ -17,6 +17,7 @@ import ptFlag from '../../../../assets/lang-flags/pt.svg';
 import { useAppDispatch, useAppSelector } from '../../../main/store/root.store';
 import { ContextLink } from '../../../shared/components/context-link/context-link';
 import { FormattedMessage } from '../../../shared/components/formatted-message/formatted-message';
+import { layoutStore, selectViewStructure } from '../../../shared/store/layout.store';
 import { localeStore, selectLanguage } from '../../../shared/store/locale.store';
 import { assertIsNode } from '../../../shared/utils/asserts-in-node';
 import { createClassName, createStyleHelper } from '../../../shared/utils/class-names';
@@ -35,6 +36,8 @@ export const Menu: FunctionComponent<IMenu> = ({ className }) => {
     const user = auth.user;
     const fullNameUser = `${user?.profile?.name} ${user?.profile?.family_name}`;
     const dispatch = useAppDispatch();
+    const isViewStructureEnabled = useAppSelector(selectViewStructure);
+
     const [open, setOpen] = useState(false);
 
     const language = useAppSelector(selectLanguage);
@@ -58,6 +61,10 @@ export const Menu: FunctionComponent<IMenu> = ({ className }) => {
             }),
         );
     }, [dispatch]);
+
+    const onChangeViewStructure = useCallback(() => {
+        dispatch(layoutStore.actions.setViewStructure(!isViewStructureEnabled));
+    }, [dispatch, isViewStructureEnabled]);
 
     const onChangeLocalePT = useCallback(() => {
         dispatch(
@@ -171,7 +178,15 @@ export const Menu: FunctionComponent<IMenu> = ({ className }) => {
                                                 </Button>
                                             )}
                                             <Divider />
-                                            <Button className={style('to-logout')}>
+                                            <Button
+                                                className={style('to-logout')}
+                                                onClick={onChangeViewStructure}
+                                                variant={
+                                                    isViewStructureEnabled
+                                                        ? ButtonVariant.LIGHT
+                                                        : undefined
+                                                }
+                                            >
                                                 <Gap direction="horizontal">
                                                     <MaterialSymbol name="javascript" />
                                                     <FormattedMessage id="dashboard.components.menu.javascript-structure" />

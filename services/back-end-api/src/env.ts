@@ -80,8 +80,16 @@ export const env = {
         username: getOsEnv('MONITOR_USERNAME'),
         password: getOsEnv('MONITOR_PASSWORD'),
     },
-    webNotification:{
+    webNotification: {
         privateKey: getOsEnv('WEB_PUSH_PRIVATE_KEY'),
         publicKey: getOsEnv('WEB_PUSH_PUBLIC_KEY'),
-    }
+    },
+    auth: {
+        schema: getOsEnv('AUTH_SCHEMA'),
+        host: getOsEnv('AUTH_HOST'),
+        port: getOsEnv('AUTH_PORT'),
+        realm: getOsEnv('REALM'),
+        clientId: getOsEnv('CLIENT_ID'),
+        publicKey: getOsEnv('AUTH_PUBLIC_KEY'),
+    },
 };

@@ -7,11 +7,11 @@
             "path": "./apps/front-end-client"
         },
         {
-            "name": "🌐 Mobile Client Example",
+            "name": "📱 Mobile Client Example",
             "path": "./apps/mobile-app"
         },
         {
-            "name": "🌐 Mobile Client",
+            "name": "📱 Mobile Client",
             "path": "./apps/mobile-client-app"
         },
         // Services

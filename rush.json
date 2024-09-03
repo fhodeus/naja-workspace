@@ -375,6 +375,12 @@
             "shouldPublish": true
         },
         {
+            "packageName": "@endeavour/keycloak",
+            "projectFolder": "services/keycloak",
+            "reviewCategory": "tools",
+            "shouldPublish": true
+        },
+        {
             "packageName": "@endeavour/front-end-client",
             "projectFolder": "apps/front-end-client",
             "reviewCategory": "production",

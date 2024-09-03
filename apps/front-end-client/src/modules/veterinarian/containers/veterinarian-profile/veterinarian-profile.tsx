@@ -15,7 +15,7 @@ export function VeterinarianProfile() {
         consultation: consultationService.getConsultationsByVeterinarian(params.id ?? ''),
     };
 
-    useDashboardHeader('Perfil do Veterinario');
+    useDashboardHeader('Perfil do Veterinário');
 
     return (
         <div>

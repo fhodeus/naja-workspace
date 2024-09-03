@@ -2,6 +2,7 @@ import { memo } from 'react';
 import { useRoutes } from 'react-router-dom';
 
 import { dashBoardRoutes } from '../dashboard/dashboard.routes';
+import { ContextNavigate } from '../shared/components/context-navigate/context-navigate';
 
 import { LocaleRedirect } from './components/locale-redirect/locale-redirect';
 import { AuthenticationGuard, AuthType } from './guards/authentication-guard';
@@ -57,18 +58,22 @@ const routes = [
                 ),
                 children: dashBoardRoutes,
             },
-        ]
+            {
+                path: '*',
+                element: <LocaleRedirect />,
+                children: [
+                    {
+                        index: true,
+                        path: '*',
+                        element: <ContextNavigate to="/dashboard" />,
+                    },
+                ],
+            },
+        ],
     },
     {
         path: '*',
         element: <LocaleRedirect />,
-        children: [
-            {
-                index: true,
-                path: '*',
-                element: <div>{'/404'}</div>,
-            },
-        ],
     },
 ];
 

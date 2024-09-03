@@ -52,18 +52,18 @@ export class Consultation {
     @OneToMany((type) => DoseInventory, (doseInventory) => doseInventory.consultation)
     public doseInventory: DoseInventory[];
 
-    @Column({ name: 'anamnese_principal', default:"" })
+    @Column({ name: 'anamnese_principal', default: '' })
     public anamnesePrincipal: string;
 
-    @Column({ name: 'anamnese_progress', default:"" })
+    @Column({ name: 'anamnese_progress', default: '' })
     public anamneseProgress: string;
 
-    @Column({ name: 'anamnese_food', default:"" })
+    @Column({ name: 'anamnese_food', default: '' })
     public anamneseFood: string;
 
-    @Column({ name: 'anamnese_contactants', default:"" })
+    @Column({ name: 'anamnese_contactants', default: '' })
     public anamneseContactants: string;
 
-    @Column({ name: 'anamnese_special', default:"" })
+    @Column({ name: 'anamnese_special', default: '' })
     public anamneseSpecial: string;
 }

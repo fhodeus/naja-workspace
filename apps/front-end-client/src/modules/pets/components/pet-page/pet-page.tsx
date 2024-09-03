@@ -19,6 +19,7 @@ import type {
 
 import { Calendar } from '../../../shared/components/calendar/calendar';
 import { ContextLink } from '../../../shared/components/context-link/context-link';
+import { JavascriptStructure } from '../../../shared/components/javascript-structure/javascript-structure';
 import { createStyleHelper } from '../../../shared/utils/class-names';
 import { PetInfoProfile } from '../pet-info-profile/pet-info-profile';
 
@@ -73,7 +74,9 @@ export function PetPage({
                     <Divider />
                     <PetInfoProfile pet={pet} />
                     <Divider />
-                    <div className={style('client-info-footer')}>footer</div>
+                    <div className={style('client-info-footer')}>
+                        <JavascriptStructure data={pet} />
+                    </div>
                 </Gap>
             </Box>
             <Box>

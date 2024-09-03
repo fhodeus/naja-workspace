@@ -20,7 +20,7 @@ export interface postResponse<T> {
 export class AxiosKeycloakAdapter implements HttpClient {
     readonly axiosInstance;
 
-    constructor(readonly baseURL: string = 'https://auth.clinic-pet.app.br') {
+    constructor(readonly baseURL: string = 'https://auth.localhost:8443') {
         this.axiosInstance = axios.create({
             baseURL,
         });

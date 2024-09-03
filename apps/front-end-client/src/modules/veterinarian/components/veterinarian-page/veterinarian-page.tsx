@@ -17,6 +17,7 @@ import type {
 
 import { Calendar } from '../../../shared/components/calendar/calendar';
 import { ContextNavLink } from '../../../shared/components/context-nav-link/context-nav-link';
+import { JavascriptStructure } from '../../../shared/components/javascript-structure/javascript-structure';
 import { createStyleHelper } from '../../../shared/utils/class-names';
 import { VeterinarianInfoComponent } from '../veterinarian-info/veterinarian-info';
 
@@ -29,12 +30,11 @@ export function PetPage({
     consultations,
 }: {
     veterinarian: VeterinarianResponse;
-
     consultations?: ConsultationResponse[];
 }) {
     return (
         <Gap className={style(undefined)}>
-            <Title>Veterinario</Title>
+            <Title>Veterinário</Title>
             <Divider />
             <Box>
                 <Gap>
@@ -58,7 +58,9 @@ export function PetPage({
                     <Divider />
                     <VeterinarianInfoComponent veterinarian={veterinarian} />
                     <Divider />
-                    <div className={style('client-info-footer')}>footer</div>
+                    <div className={style('client-info-footer')}>
+                        <JavascriptStructure data={veterinarian} />
+                    </div>
                 </Gap>
             </Box>
             <Box>
