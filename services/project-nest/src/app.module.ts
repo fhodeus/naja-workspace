@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { PostgresConfigFactory } from './config/postgres.config.service';
 import { Module } from '@nestjs/common';
 import { CacheConfigFactory } from './config/cache.config.service';
+import { MongoConfigFactory } from './config/mongo.config.service';
 
 @Module({
     imports: [
@@ -20,6 +21,11 @@ import { CacheConfigFactory } from './config/cache.config.service';
         TypeOrmModule.forRootAsync({
             useFactory: PostgresConfigFactory,
             imports: [ConfigModule],
+            inject: [ConfigService],
+        }),
+        TypeOrmModule.forRootAsync({
+            imports: [ConfigModule],
+            useFactory: MongoConfigFactory,
             inject: [ConfigService],
         }),
     ],
