@@ -667,6 +667,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "mongodb",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "morgan",
       "allowedCategories": [ "production" ]
     },
