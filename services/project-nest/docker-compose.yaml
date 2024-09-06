@@ -6,13 +6,15 @@ services:
     restart: always
     tty: true
     environment:
-      POSTGRES_DB: 'database'
-      POSTGRES_USER: 'user'
-      POSTGRES_PASSWORD: 'password'
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     ports:
       - '5432:5432'
     expose:
       - '5432'
+    networks:
+      - postgres
 
   pgadmin:
     image: dpage/pgadmin4
@@ -34,10 +36,42 @@ services:
     volumes:
       - redis:/data
 
+  mongo-express:
+    image: mongo-express
+    ports:
+      - 8082:8081
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongo-server
+      ME_CONFIG_MONGODB_PORT: 27017
+      ME_CONFIG_MONGODB_ADMINUSERNAME: ${DB-NOSQL_USERNAME}
+      ME_CONFIG_MONGODB_ADMINPASSWORD: ${DB-NOSQL_PASSWORD}
+      ME_CONFIG_BASICAUTH: false
+    links:
+      - mongo
+    depends_on:
+      - mongo
+    networks:
+      - mongo-compose-network
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo-server
+    environment:
+      MONGO_INITDB_DATABASE: demodb  
+      MONGO_INITDB_ROOT_USERNAME: ${DB-NOSQL_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${DB-NOSQL_PASSWORD}
+    ports:
+      - "27017:27017"
+    networks:
+      - mongo-compose-network
+
 networks:
   postgres:
+    driver: bridge
+  mongo-compose-network:
     driver: bridge
 
 volumes:
     postgres:
     redis:
+    mongo:
