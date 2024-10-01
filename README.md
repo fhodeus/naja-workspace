@@ -1,5 +1,5 @@
-### Farmbits Monorepo
-# Welcome to Farmbits Rush Project
+### Naja Monorepo
+# Welcome to Naja Rush Project
 
 ## Prerequisites
 
