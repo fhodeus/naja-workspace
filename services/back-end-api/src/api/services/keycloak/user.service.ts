@@ -30,7 +30,7 @@ export class CustomerKeycloakService {
             '/realms/master/protocol/openid-connect/token',
             {
                 username: 'admin',
-                password: 'password',
+                password: 'admin',
                 client_id: 'admin-cli',
                 grant_type: 'password',
             },
@@ -44,7 +44,7 @@ export class CustomerKeycloakService {
 
         this.httpClient.defineContentType('application/json;charset=UTF-8');
         const response = await this.httpClient.post<any>(
-            '/admin/realms/front-end-client/users',
+            '/admin/realms/naja/users',
             config.payload,
         );
        

@@ -1,6 +1,11 @@
 // Emojipedia with get Emoji Names for Rush folder: https://emojipedia.org/
 {
     "folders": [
+        // ci:cd 
+        {
+            "name": "👷 CI/CD Workflow",
+            "path": "./.github"
+        },
         // Frontend
         {
             "name": "🌐 Front End Client",
@@ -74,7 +79,8 @@
             "tools": true,
             "libs": true,
             "services": true,
-            "common": true
+            "common": true,
+            ".github": true
         },
         "search.exclude": {
             "**/node_modules": true,

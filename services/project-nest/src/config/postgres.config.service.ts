@@ -8,6 +8,6 @@ export const PostgresConfigFactory = (configService: ConfigService): TypeOrmModu
     username: configService.get<string>('DB_USERNAME'),
     password: configService.get<string>('DB_PASSWORD'),
     database: configService.get<string>('DB_DATABASE'),
-    entities: [__dirname + '/../**/*.entity.{js,ts}'],
+    entities: [__dirname + '/../**/*.entity.{js,ts}', __dirname + '/../**/*.model.{js,ts}'],
     synchronize: true,
 });

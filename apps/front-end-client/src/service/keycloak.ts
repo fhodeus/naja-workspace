@@ -15,5 +15,5 @@ class KeycloakClientClass extends KeycloakAdminClient {
     }
 }
 
-export const KeycloakClient = new KeycloakClientClass('admin', 'password');
+export const KeycloakClient = new KeycloakClientClass('admin', 'admin');
 

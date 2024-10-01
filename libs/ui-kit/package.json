@@ -87,5 +87,8 @@
         "react-dom": "16.8.0 || >=17.x"
     },
     "keywords": [],
-    "license": "MIT"
+    "license": "MIT",
+    "browserslist": [
+        "defaults"
+    ]
 }

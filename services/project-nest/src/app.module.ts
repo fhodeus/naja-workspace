@@ -6,6 +6,8 @@ import { PostgresConfigFactory } from './config/postgres.config.service';
 import { Module } from '@nestjs/common';
 import { CacheConfigFactory } from './config/cache.config.service';
 import { MongoConfigFactory } from './config/mongo.config.service';
+import { UserModule } from './module/user/user.module';
+import { PetsModule } from './module/pets/pets.module';
 
 @Module({
     imports: [
@@ -28,6 +30,8 @@ import { MongoConfigFactory } from './config/mongo.config.service';
             useFactory: MongoConfigFactory,
             inject: [ConfigService],
         }),
+        UserModule,
+        PetsModule,
     ],
 })
 export class AppModule {}
