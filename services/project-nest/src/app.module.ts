@@ -9,6 +9,7 @@ import { MongoConfigFactory } from './config/mongo.config.service';
 import { UserModule } from './module/user/user.module';
 import { PetsModule } from './module/pets/pets.module';
 import { DefaultModule } from './module/default/default.module';
+import { SignalingGateway } from './module/signal/signaling.gateway';
 
 @Module({
     imports: [
@@ -35,5 +36,6 @@ import { DefaultModule } from './module/default/default.module';
         PetsModule,
         DefaultModule,
     ],
+    providers: [SignalingGateway],
 })
 export class AppModule {}

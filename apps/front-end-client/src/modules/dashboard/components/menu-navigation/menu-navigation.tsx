@@ -38,6 +38,7 @@ export const MenuNavigation: FunctionComponent<MenuNavigation> = ({ className, a
                 </MenuNavigationButton>
                 <MenuNavigationButton to={'dashboard/financial'}>Financeiro</MenuNavigationButton>
                 <MenuNavigationButton to={'dashboard/customer'}>Clientes</MenuNavigationButton>
+                <MenuNavigationButton to={'dashboard/streaming'}>Streaming</MenuNavigationButton>
             </Gap>
         );
     }

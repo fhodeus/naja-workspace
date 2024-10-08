@@ -10,6 +10,7 @@ import {
     IconSize,
     MaterialSymbol,
 } from '@endeavour/ui-kit';
+import io from 'socket.io-client';
 
 import { createStyleHelper } from '../../utils/class-names';
 
@@ -17,13 +18,56 @@ import styles from './web-cam.module.scss';
 
 const style = createStyleHelper(styles, 'web-cam');
 
+const socket = io('ws://localhost:3001/signal'); // Conecte ao servidor WebSocket
+
+const createOffer = async (peerConnection:RTCPeerConnection) => {
+    const offer = await peerConnection.createOffer();
+    await peerConnection.setLocalDescription(offer);
+    socket.emit('signal', { type: 'offer', offer });
+};
+
 export const WebCamComponent = () => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const photoRef = useRef<HTMLCanvasElement>(null);
-
+    const [peerConnection, setPeerConnection] = useState<RTCPeerConnection | null>(null);
     const [hasPhoto, setHasPhoto] = useState(false);
     const [hasCapture, setHasCapture] = useState(false);
 
+    // Configuração do STUN server para a conexão WebRTC
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const iceServers = {
+        iceServers: [
+            { urls: 'stun:stun.l.google.com:19302' }, // Servidor STUN do Google
+        ],
+    };
+
+    // Inicializa o WebRTC PeerConnection e manipula os eventos
+    const initializeConnection = useCallback(
+        (stream: MediaStream) => {
+            const peer = new RTCPeerConnection(iceServers);
+            stream.getTracks().forEach((track) => peer.addTrack(track, stream));
+
+            // Enviar ICE candidates para o outro peer
+            peer.onicecandidate = (event) => {
+                if (event.candidate) {
+                    socket.emit('signal', { type: 'candidate', candidate: event.candidate });
+                }
+            };
+
+            // Receber o stream de vídeo do peer
+            peer.ontrack = (event) => {
+                const [remoteStream] = event.streams;
+                if (videoRef.current) {
+                    videoRef.current.srcObject = remoteStream;
+                }
+            };
+
+            setPeerConnection(peer);
+        },
+        [iceServers],
+    );
+
+    // Configura a transmissão de vídeo
     const getVideo = useCallback(() => {
         navigator.mediaDevices
             .getUserMedia({ video: { width: 1080, height: 1080 } })
@@ -33,11 +77,12 @@ export const WebCamComponent = () => {
                     video.srcObject = stream;
                     video.play();
                 }
+                initializeConnection(stream);
             })
             .catch((e: Error) => {
                 console.log(e);
             });
-    }, []);
+    }, [initializeConnection]);
 
     const capture = useCallback(() => {
         const video = videoRef.current;
@@ -79,8 +124,37 @@ export const WebCamComponent = () => {
         setHasCapture(true);
     }, []);
 
+    // Função para criar uma oferta de conexão P2P
+
+    // Função para lidar com os sinais recebidos
+    useEffect(() => {
+        socket.on('signal', async (data) => {
+            if (data.type === 'offer') {
+                if (peerConnection) {
+                    await peerConnection.setRemoteDescription(
+                        new RTCSessionDescription(data.offer),
+                    );
+                    const answer = await peerConnection.createAnswer();
+                    await peerConnection.setLocalDescription(answer);
+                    socket.emit('signal', { type: 'answer', answer });
+                }
+            } else if (data.type === 'answer') {
+                if (peerConnection) {
+                    await peerConnection.setRemoteDescription(
+                        new RTCSessionDescription(data.answer),
+                    );
+                }
+            } else if (data.type === 'candidate') {
+                if (peerConnection) {
+                    await peerConnection.addIceCandidate(new RTCIceCandidate(data.candidate));
+                }
+            }
+        });
+    }, [peerConnection]);
+
     useEffect(() => {
         getVideo();
+        
     }, [getVideo]);
 
     return (
@@ -108,6 +182,8 @@ export const WebCamComponent = () => {
             <video
                 className={style('video', { hasPhoto, hasCapture: !hasCapture })}
                 ref={videoRef}
+                autoPlay
+                playsInline
             ></video>
             <div className={style('capture-button', { hasCapture: !hasCapture })}>
                 {hasPhoto ? (
@@ -139,6 +215,18 @@ export const WebCamComponent = () => {
                     </Button>
                 )}
             </div>
+            {peerConnection ? (
+                <Button
+                    variant={ButtonVariant.ACTION}
+                    size={ButtonSize.SMALL}
+                    // eslint-disable-next-line @arthurgeron/react-usememo/require-usememo
+                    onClick={() => {
+                        createOffer(peerConnection);
+                    }}
+                >
+                    Start P2P Connection
+                </Button>
+            ) : null}
         </div>
     );
 };
