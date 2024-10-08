@@ -167,6 +167,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "@nestjs/platform-socket.io",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "@nestjs/schematics",
       "allowedCategories": [ "production" ]
     },
@@ -176,6 +180,10 @@
     },
     {
       "name": "@nestjs/typeorm",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@nestjs/websockets",
       "allowedCategories": [ "production" ]
     },
     {
@@ -828,6 +836,14 @@
     },
     {
       "name": "slick-carousel",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "socket.io",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "socket.io-client",
       "allowedCategories": [ "production" ]
     },
     {

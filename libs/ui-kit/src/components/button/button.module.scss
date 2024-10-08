@@ -108,17 +108,17 @@ $border-button-hover: color-from-var($primary-color-500);
     }
 
     &--has-icon {
-        padding: $space--2;
         aspect-ratio: 1/1;
+        padding: $space--2;
     }
 
     &__loader {
+
+        display: none;
         margin-right: 0;
         overflow: hidden;
         transition: all 0.1s ease-in;
         width: 0;
-
-        display: none;
     }
 
     &--loading > &__loader {
@@ -126,8 +126,8 @@ $border-button-hover: color-from-var($primary-color-500);
         animation-iteration-count: infinite;
         animation-name: opacity-animation;
         animation-timing-function: ease-in-out;
+        display: block;
         margin-right: $space--3;
         width: 1em;
-        display: block;
     }
 }

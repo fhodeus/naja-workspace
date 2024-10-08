@@ -2,6 +2,7 @@
 @import '../../styles/mixins/remify';
 @import '../../styles/mixins/colors';
 
+
 .material-symbol {
     font-size: remify(12px);
     font-variant: normal;
@@ -41,6 +42,6 @@
     }
 
     &--interaction {
-        color: red;
+        color: color-from-var($color-danger-500);
     }
 }

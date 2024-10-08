@@ -1,21 +1,10 @@
-import {
-    Column,
-    CreateDateColumn,
-    JoinColumn,
-    ManyToOne,
-    OneToMany,
-    Entity,
-    PrimaryGeneratedColumn,
-} from 'typeorm';
+import { Column, CreateDateColumn, JoinColumn, ManyToOne, OneToMany, Entity } from 'typeorm';
 import { User } from './user.entity';
 import { Consultation } from './consultation.entity';
 import { BaseEntity } from 'src/module/_shared/base/base.entity';
 
 @Entity({ name: 'pet' })
 export class Pet extends BaseEntity {
-    @PrimaryGeneratedColumn('uuid')
-    public id: string;
-
     @Column()
     public name: string;
 

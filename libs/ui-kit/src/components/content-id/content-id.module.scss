@@ -5,14 +5,14 @@
 
 .content-id {
     @include set-font-size(calc($font-size--2 - 2px));
-    line-height: 12px;
+    align-items: center;
     background: color-from-var($secondary-color-300);
-    padding: $space--1 $space--2;
     border-radius: $radius--small;
     display: flex;
-    align-items: center;
     gap: $space--1;
     justify-content: space-between;
+    line-height: 12px;
+    padding: $space--1 $space--2;
     white-space: nowrap;
    
     &__icon-copy {
@@ -20,10 +20,10 @@
     }
 
     &__button-copy {
-        margin: 0;
-        padding: 0;
+        background: transparent;
         border: 0;
         cursor: pointer;
-        background: transparent;
+        margin: 0;
+        padding: 0;
     }
 }

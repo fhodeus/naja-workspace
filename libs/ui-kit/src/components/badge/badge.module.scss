@@ -11,8 +11,8 @@
     font-size: inherit;
     gap: $space--1;
     text-align: center;
-    width:fit-content;
     white-space: nowrap;
+    width:fit-content;
 
     &--pill {
         border-radius: 10px;
@@ -94,10 +94,10 @@
     }
 
     &--caption {
-       font-size: remify(12px);
         @include header-text();
-        padding: $space--1;
+       font-size: remify(12px);
         line-height: 1.25;
+        padding: $space--1;
     }
 
     &--caption#{&}--only-icon {

@@ -12,11 +12,11 @@ $background-input-disabled: color-from-var($grays-color-300, 0.8);
 
 .text-area {
     @include set-font-size($font-size--2);
-    font-family: $font-family;
     background: $background-input;
     border: 0;
     border-radius: $radius;
     color: $color-input;
+    font-family: $font-family;
     font-weight: 600;
     line-height: remify(20px);
     margin: 0;

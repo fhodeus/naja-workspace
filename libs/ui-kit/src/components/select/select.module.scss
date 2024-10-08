@@ -9,13 +9,13 @@ $color-input-placeholder: color-from-var($primary-color-200);
 $background-input: color-from-var($secondary-color-300);
 
 .select {
-    font-family: $font-family;
     @include set-font-size($font-size--2);
     appearance: none;
     background: $background-input;
     border: 0;
     border-radius: $radius;
     color: $color-input;
+    font-family: $font-family;
     font-weight: 600;
     line-height: remify(20px);
     margin: 0;

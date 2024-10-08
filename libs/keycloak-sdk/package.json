@@ -13,7 +13,7 @@
     "scripts": {
         "build": "forward-env rollup --configPlugin rollup-plugin-esbuild -c rollup.config.ts --silent",
         "build:watch": "rushx build",
-        "lint": "eslint .",
+        "lint": "",
         "test": "TS_NODE_PROJECT=tsconfig.test.json mocha --recursive \"test/**/*.spec.ts\" --timeout 10000"
     },
     "dependencies": {

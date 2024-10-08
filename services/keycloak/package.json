@@ -7,9 +7,10 @@
     "license": "ISC",
     "scripts": {
         "build": "docker-compose build",
-        "build:watch": "rushx certs && docker-compose up --build --force-recreate",
+        "build:watch": "rushx certs && docker-compose up",
         "certs": "dragon ensure-certificate auth.localhost",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": ""
     },
     "dependencies": {
         "@endeavour/cli": "workspace:*",

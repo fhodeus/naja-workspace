@@ -4,14 +4,14 @@
 @import '../../../../styles/mixins/scroll';
 
 .javascript-structure {
+
+    @include  scroll();
     background: #eef1f6;
-    padding: 1rem;
+    border-radius: $radius--small;
     font-size: 12px;
     line-height: 1.1;
-    border-radius: $radius--small;
     max-height: 400px;
    
     overflow: auto;
-
-    @include  scroll();
+    padding: 1rem;
 }

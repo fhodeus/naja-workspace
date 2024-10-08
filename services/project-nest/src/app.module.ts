@@ -8,6 +8,7 @@ import { CacheConfigFactory } from './config/cache.config.service';
 import { MongoConfigFactory } from './config/mongo.config.service';
 import { UserModule } from './module/user/user.module';
 import { PetsModule } from './module/pets/pets.module';
+import { DefaultModule } from './module/default/default.module';
 
 @Module({
     imports: [
@@ -32,6 +33,7 @@ import { PetsModule } from './module/pets/pets.module';
         }),
         UserModule,
         PetsModule,
+        DefaultModule,
     ],
 })
 export class AppModule {}
